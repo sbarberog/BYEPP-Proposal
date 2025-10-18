@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The B.Y.E.P.P. Proposal</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+    body {
+      background: linear-gradient(180deg, #ffcb05 0%, #ff3636 30%, #00234b 100%);
+      /* background:#00234b; */
+      /* color: #222; */
+      color: #2a75bb;
+      margin: 0;
+      /* padding: 20px; */
+      font-family: monospace;
+    }
+
+    h1,
+    h2,
+    h3 {
+      text-align: center;
+      font-family: 'Press Start 2P', monospace;
+    }
+
+    h1,
+    h2 {
+      /* font-size: 3em; */
+      color: #ffcb05;
+      text-shadow: 2px 2px 0 #2a75bb;
+      max-width: 1200px;
+      margin: 30px auto;
+    }
+
+    h1 {
+      /* font-size: 1.5em; */
+      text-shadow: 3px 3px 0 #155b9c;
+      /* margin-top: 20px; */
+    }
+
+    h3 {
+      font-size: 14px;
+      /* color: #2a75bb; */
+      color: #222;
+      /* text-shadow: 2px 2px 0 #ffcb05; */
+    }
+
+    .section {
+      background: #ffffff;
+      padding: 0 20px 40px 20px;
+      margin: 20px auto;
+      /* width: 90%; */
+      max-width: 800px;
+      border: 3px solid #2a75bb;
+      border-radius: 20px;
+      box-shadow: 4px 4px 0 #ffcb05;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      /* font-size: 11px; */
+      font-size: clamp(9px, 2vw, 14px);
+      font-weight: bold;
+      margin: 10px 0px;
+      /* background-color: rgba(113, 175, 255, 0.26); */
+      background-color: #ffcd05a2;
+      max-width: 720px;
+      margin: auto;
+      display: block;
+      overflow-x: auto;
+      box-shadow: 4px 4px 0 #ffcb05;
+    }
+
+    th,
+    td {
+      border: 2px solid #2a75bb;
+      padding: 8px;
+      text-align: center;
+      /* font-size: 15px; */
+      /* white-space: nowrap; */
+    }
+
+    th {
+      background: #2a75bb;
+      color: #ffcd05;
+    }
+
+    td:first-child {
+      font-weight: bold;
+      color: #d62828;
+    }
+
+    /* 
+    th {
+      background: #ffcb05;
+      color: #2a75bb;
+    }  */
+
+    td:first-child {
+      font-weight: bold;
+      color: #d62828;
+    }
+
+    ul {
+      list-style-type: "▶ ";
+      padding-left: 20px;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    ul ul {
+      list-style-type: circle;
+    }
+
+    .highlight {
+      color: #d62828;
+      font-weight: bold;
+    }
+
+    .conclusion {
+      background-color: #d62828;
+      color: white;
+    }
+
+    .byepp {
+      color: #155b9c;
+      text-shadow: 3px 3px 0 #ffcb05;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      margin-bottom: 20px;
+      /* font-size: 10px; */
+      font-size: clamp(8px, 2vw, 10px);
+      color: #f1f1f1;
+    }
+
+    h1 {
+      font-size: clamp(16px, 4vw, 24px);
+    }
+
+    h2 {
+      font-size: clamp(14px, 3vw, 16px);
+      /* margin-top: 40px; */
+    }
+
+    h3 {
+      font-size: clamp(12px, 2.5vw, 14px);
+      color: #2a75bb;
+      /* color: #222; */
+    }
+
+    p,
+    li {
+      font-size: clamp(10px, 2.2vw, 15px);
+      line-height: 1.6;
+    }
+
+    .pokeball {
+      height: 5vmin;
+      width: 5vmin;
+      border-radius: 50%;
+      border: .4vmin solid black;
+      background-image:
+        radial-gradient(white 20%, white 20%, black 20%, black 30%, transparent 30%, transparent), linear-gradient(red 46%, black 46%, black 54%, white 54%);
+      margin: -10px auto 20px auto;
+    }
+
+    #poke-bottom {
+      margin: 30px auto -10px auto;
+      height: 8vmin;
+      width: 8vmin;
+      border-radius: 50%;
+      border: .6vmin solid black;
+    }
+
+    header {
+      background-color: #d62828;
+      max-width: 1200px;
+      position: sticky;
+      top: 10px;
+      margin: 10px auto;
+      padding: 0px;
+      border-radius: 20px;
+      overflow: auto;
+      border: 3px solid #2a75bb;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      /* border-radius: 20px; */
+      /* https://smoothshadows.com/#djEsMSw1LDAuMjYsMTM0LDE4LDE4LCMwMzA3MTIsI2YzZjRmNiwjZmZmZmZmLDI%3D */
+      box-shadow: 4px 4px 0 #ffcb05,
+        1px 1px 2px rgba(3, 7, 18, 0.05),
+        3px 3px 8px rgba(3, 7, 18, 0.10),
+        6px 6px 19px rgba(3, 7, 18, 0.16),
+        12px 12px 33px rgba(3, 7, 18, 0.21),
+        18px 18px 52px rgba(3, 7, 18, 0.26);
+    }
+
+    /* 🌐 RESPONSIVE DESIGN */
+    @media (max-width: 700px) {
+      body {
+        padding: 10px;
+      }
+
+      header {
+        position: relative;
+        padding: 0px;
+        margin-top: 0px;
+        margin-bottom: 20px;
+      }
+
+      .section {
+        padding: 12px 12px 20px 12px;
+        border-width: 2px;
+        border-radius: 10px;
+        margin: 10px auto;
+        /* width: 95%; */
+      }
+
+      h2,
+      h3 {
+        margin: 10px auto;
+      }
+
+      th,
+      td {
+        padding: 5px;
+      }
+
+      .pokeball {
+        height: 12vmin;
+        width: 12vmin;
+        border-radius: 50%;
+        border: 1vmin solid black;
+        margin: -15px auto 10px auto;
+      }
+
+      footer {
+        margin-top: 60px;
+        margin-bottom: 5px;
+      }
+
+      /* 
+      .poke-top {
+        position: sticky;
+        z-index: 99;
+        top: 0;
+        display: flex;
+        margin: -15px auto 10px auto;
+        overflow: auto;
+      } */
+
+      .back-to-top {
+        display: flex;
+        justify-content: center;
+      }
+
+      #poke-bottom {
+        position: fixed;
+        bottom: 40px;
+        /* display:flex; */
+        /* margin: 30px auto -10px auto; */
+        height: 8vmin;
+        width: 8vmin;
+        border-radius: 50%;
+        border: .6vmin solid black;
+      }
+    }
+
+    /* Smooth scrolling IF user doesn't have a preference due to motion sensitivities */
+    @media screen and (prefers-reduced-motion: no-preference) {
+      html {
+        scroll-behavior: smooth;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Propuesta <span class="byepp">"R.I.P.P."</span><br><br>Revisión Integral de los Puntos de Poder</h1>
+    <div class="pokeball poke-top"></div>
+  </header>
+  <!-- <h1>The <span class="byepp">"B.Y.E.P.P."</span> proposal<br><br>Battle Yield Energy Points Paradigm</h1> -->
+
+  <div class="section">
+    <h2>Introducción</h2>
+    <h3>⚔️ ¿Qué es la propuesta R.I.P.P.?</h3>
+    <p>Esta propuesta consiste en una modificación del sistema de combate por turnos clásico de Pokémon.<br>WIP
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>⚔️ Cambios principales</h2>
+    <h3>🔋 Sustitución de los PP por PE (Puntos de Energía)</h3>
+    <ul>
+      <li>Los <span class="highlight">PP (Puntos de Poder)</span> desaparecen y se sustituyen por <span
+          class="highlight">PE = Puntos de
+          Energía</span>.
+      </li>
+      <li>Basado en el sistema de energía del <strong>Juego de Cartas Coleccionables</strong> de Pokémon.</li>
+      <li>Inicio del combate: ambos bandos tienen <strong>3 PE (valor máximo)</strong>*.</li>
+      <li>Cada acción tiene un coste fijo* comprendido entre <strong>0 y 3 PE</strong>.</li>
+      <li>Al final de cada turno, ambos bandos <strong>recuperan 1 PE</strong>*.</li>
+      <li>Los PE siempre serán <strong>visibles</strong> para ambos oponentes, y se representarán de manera gráfica (p.
+        ej. una batería o una pokéball con 3 secciones).</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>💥 Coste de los movimientos según su utilidad o potencia de ataque</h2>
+    <table>
+      <tr>
+        <th>Coste</th>
+        <th>Clases de movimientos</th>
+        <th>Ejemplos</th>
+      </tr>
+      <tr>
+        <td>0 PE</td>
+        <td>Ataques sin daño o de escasa utilidad; permiten actuar a la vez que se recupera energía</td>
+        <td>Gruñido, Aguante, Ataque arena</td>
+      </tr>
+      <tr>
+        <td>1 PE</td>
+        <td>Ataques básicos (potencia ≲ 60), de estado o con efectos negativos</td>
+        <td>Placaje, Mordisco, Paralizador, Patada salto alta, Derribo</td>
+      </tr>
+      <tr>
+        <td>2 PE</td>
+        <td>Ataques fuertes (potencia ≳ 60), múltiples o con efectos especiales.</td>
+        <td>Surf, Puño dinámico, Excavar, Protección, Voltiocambio, Síntesis</td>
+      </tr>
+      <tr>
+        <td>3 PE</td>
+        <td>Ataques extremadamente potentes o definitivos</td>
+        <td>Llamarada, Hiperrayo, Rayo solar, Fisura</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>🎒 Objetos y otras acciones</h2>
+    <ul>
+      <li>Los <strong>objetos consumen PE</strong> según su potencia o utilidad:
+        <ul>
+          <li>Poción, Antídoto = 1 PE</li>
+          <li>Ataque X, Revivir = 2 PE</li>
+          <li>Máx. Revivir = 3 PE</li>
+        </ul>
+      </li>
+      <li><strong>Cambiar de Pokémon</strong> cuesta 1 PE.</li>
+      <li><strong>Rencor (2 PE)</strong> reduce en 2 los PE del enemigo.</li>
+      <li><strong>Presión</strong> reduce en 1 los PE del enemigo en el turno inicial.</li>
+      <li>Si el pokémon no tiene PE suficientes antes de atacar, el ataque <strong>fallará</strong>.</li>
+      <li><strong>Nueva acción universal: <span class="highlight">Defender</span> (0 PE)</strong>
+        <ul>
+          <li>Aumenta ligeramente la <strong>evasión</strong> ese turno.</li>
+          <li>Permite resistir un ataque con <strong>1 PS</strong> si el daño no es excesivo.</li>
+          <li>Movimiento con <strong>prioridad</strong> y animación de protección.</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>💚 Recuperación de energía</h2>
+    <ul>
+      <li>Si el Pokémon tiene <strong><span class="highlight">salud crítica</span></strong> al final del turno, se
+        recupera <strong>+1 PE adicional</strong>.</li>
+      <li>Algunos <strong>ataques y objetos</strong> permiten <strong>recuperar PE</strong>.</li>
+      <li>Algunos <strong>objetos equipados</strong> restauran PE:
+        <ul>
+          <li>Al entrar en combate.</li>
+          <li>Al cumplirse ciertas condiciones (p. ej. sufrir un estado alterado).</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>✳️ Habilidades y mecánicas especiales</h2>
+    <ul>
+      <li>Algunas habilidades reducen en <strong>1 PE</strong> el coste de ataques de tipo concreto:
+        <ul>
+          <li>Ej: Espesura, Mar Llamas o Torrente añadirían este efecto al tener la salud baja.</li>
+        </ul>
+      </li>
+      <li>Mecánicas especiales (Megaevoluciones, Teracristalización, etc):
+        <ul>
+          <li><strong>Megaevolución</strong>: al megaevolucionar, el Pokémon gana <strong>+1 PE
+              inmediato</strong> y tendrá <strong>+1 PE máximo</strong>.</li>
+          <li><strong>Teracristalización</strong>: los ataques del tipo del teracristal costarán <strong>-1 PE</strong>.
+          </li>
+          <li>Los <strong>pokémon legendarios</strong> podrán tener mecánicas especiales como +1 PE máximo, ganar +1 PE
+            cada turno, robo de PE, etc.</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>👥 Combates dobles</h2>
+    <ul>
+      <li>Llevarían al límite la <strong><span class="highlight">componente estratégica</span></strong> de los PE.</li>
+      <li>Los <strong>PE máximos</strong> aumentan a <strong>5</strong>.</li>
+      <li>Se <strong>recuperan 2 PE</strong> cada turno.</li>
+    </ul>
+  </div>
+
+  <div class="section conclusion">
+    <h2>🧭 Conclusión</h2>
+    <p>En resumen, la propuesta <strong>R.I.P.P.</strong> pretende:</p>
+    <ul>
+      <li>Favorecer decisiones tácticas de <strong>riesgo y recompensa</strong>.</li>
+      <li>Fomentar el uso de movimientos menos populares.</li>
+      <li>Ampliar el <strong>potencial competitivo</strong> del juego.</li>
+      <li>Mantener el <strong>sistema de turnos clásico</strong> y la <strong>accesibilidad</strong> para jugadores
+        casuales.</li>
+    </ul>
+    <p>Los <strong>Puntos de Poder (PP)</strong> representan una mecánica obsoleta, molesta y con un impacto estratégico
+      limitado. El nuevo sistema de
+      <strong>Puntos de Energía (PE)</strong>, aunque puede presentar ciertos desafíos en su balance, resultaría
+      sencillo de comprender para todos los jugadores. <br><br>Este cambio tendría un impacto mínimo en las primeras
+      etapas del juego, pero su importancia iría en aumento a medida que los pokémon aprendan movimientos que requieran
+      más de 1 PE. De esta forma, se mantendría una progresión de dificultad gradual hasta llegar a la Liga Pokémon y el
+      contenido post-game.<br>
+  </div>
+
+  <a class="back-to-top" href="#top" aria-label="Back to Top">
+    <div id="poke-bottom" class="pokeball"></div>
+  </a>
+
+  <footer>© 2025 The B.Y.E.P.P. Proposal - Design inspired on Game Freak / Nintendo
+    <br>Credits for the Pokéball CSS design: <a href="https://github.com/thecodingcouple"
+      style="color: #ffcb05;">@thecodingcouple</a>
+  </footer>
+
+</body>
+
+</html>
