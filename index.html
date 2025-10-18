@@ -170,7 +170,7 @@
       margin: -10px auto 20px auto;
     }
 
-    #poke-bottom {
+    .poke-bottom {
       margin: 30px auto -10px auto;
       height: 8vmin;
       width: 8vmin;
@@ -199,6 +199,11 @@
         6px 6px 19px rgba(3, 7, 18, 0.16),
         12px 12px 33px rgba(3, 7, 18, 0.21),
         18px 18px 52px rgba(3, 7, 18, 0.26);
+    }
+
+    .back-to-top {
+      display: flex;
+      justify-content: center;
     }
 
     /* 🌐 RESPONSIVE DESIGN */
@@ -254,13 +259,13 @@
         margin: -15px auto 10px auto;
         overflow: auto;
       } */
-
+      /* 
       .back-to-top {
         display: flex;
         justify-content: center;
-      }
+      } */
 
-      #poke-bottom {
+      .poke-bottom {
         position: fixed;
         bottom: 40px;
         /* display:flex; */
@@ -431,9 +436,9 @@
       contenido post-game.<br>
   </div>
 
-  <a class="back-to-top" href="#top" aria-label="Back to Top">
-    <div id="poke-bottom" class="pokeball"></div>
-  </a>
+  <div class="back-to-top">
+      <a href="#top" aria-label="Back to Top"class="pokeball poke-bottom"></a>
+  </div>
 
   <footer>© 2025 The B.Y.E.P.P. Proposal - Design inspired on Game Freak / Nintendo
     <br>Credits for the Pokéball CSS design: <a href="https://github.com/thecodingcouple"
