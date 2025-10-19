@@ -31,7 +31,7 @@
       color: #ffcb05;
       text-shadow: 2px 2px 0 #2a75bb;
       max-width: 1200px;
-      margin: 30px auto;
+      margin: 30px 10px;
     }
 
     h1 {
@@ -168,7 +168,8 @@
       background-image:
         radial-gradient(white 20%, white 20%, black 20%, black 30%, transparent 30%, transparent), linear-gradient(red 46%, black 46%, black 54%, white 54%);
       margin: -10px auto 20px auto;
-      box-shadow: 3px 3px 10px rgba(3, 7, 18, 0.541);
+      /* box-shadow: 3px 3px 10px rgba(3, 7, 18, 0.541); */
+      box-shadow: 4px 4px 0 #2a75bb;
     }
 
     .poke-bottom {
@@ -208,7 +209,7 @@
     }
 
     /* 🌐 RESPONSIVE DESIGN */
-    @media (max-width: 700px) {
+    @media (max-width: 600px) {
       body {
         padding: 10px;
       }
@@ -268,13 +269,15 @@
 
       .poke-bottom {
         position: fixed;
-        bottom: 40px;
+        bottom: 45px;
         /* display:flex; */
         /* margin: 30px auto -10px auto; */
         height: 8vmin;
         width: 8vmin;
         border-radius: 50%;
         border: .6vmin solid black;
+        /* box-shadow: 2px 2px 0 #2a75bb; */
+        box-shadow: 2px 2px 0 #2a75bb, 3px 3px 10px rgba(3, 7, 18, 0.541);
       }
     }
 
@@ -438,7 +441,7 @@
   </div>
 
   <div class="back-to-top">
-      <a href="#top" aria-label="Back to Top"class="pokeball poke-bottom"></a>
+    <a href="#top" aria-label="Back to Top" class="pokeball poke-bottom"></a>
   </div>
 
   <footer>© 2025 The B.Y.E.P.P. Proposal - Design inspired on Game Freak / Nintendo
