@@ -1,6 +1,13 @@
 @import url(https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap);
+/* html{
+    background:
+        radial-gradient(transparent, black),;
+    background-size: cover;
+} */
 body {
-  background: linear-gradient(180deg, #ffcb05 0, #ff3636 30%, #00234b 100%);
+  background: linear-gradient(90deg, #2a75bb 0%, transparent 40%, transparent 60%, #2a75bb 100%),
+  radial-gradient(white, transparent 20%),
+    linear-gradient(180deg, #ffcb05 0, #ff3636 30%, #001b3a 100%);
   color: #2a75bb;
   margin: 0;
   font-family: monospace;
@@ -117,16 +124,16 @@ p {
   height: 5vmin;
   width: 5vmin;
   border-radius: 50%;
-  border: 0.4vmin solid #000;
+  border: 0.4vmin solid #1b1b1b;
   background-image: radial-gradient(
       white 20%,
       #fff 20%,
-      #000 20%,
-      #000 30%,
+      #1b1b1b 20%,
+      #1b1b1b 30%,
       transparent 30%,
       transparent
     ),
-    linear-gradient(red 46%, #000 46%, #000 54%, #fff 54%);
+    linear-gradient(red 46%, #1b1b1b 46%, #1b1b1b 54%, #fff 54%);
   margin: 20px auto -10px auto;
   box-shadow: 4px 4px 0 #2a75bb;
 }
@@ -135,7 +142,7 @@ p {
   height: 8vmin;
   width: 8vmin;
   border-radius: 50%;
-  border: 0.6vmin solid #000;
+  border: 0.6vmin solid #1b1b1b;
 }
 header {
   background-color: #d62828;
@@ -164,6 +171,7 @@ header {
 @media (max-width: 600px) {
   body {
     padding: 10px;
+    /* background: linear-gradient(180deg, #ffcb05 0, #ff3636 30%, #00234b 100%); */
   }
   header {
     position: relative;
@@ -192,7 +200,7 @@ header {
     height: 12vmin;
     width: 12vmin;
     border-radius: 50%;
-    border: 1vmin solid #000;
+    border: 1vmin solid #1b1b1b;
     margin: 10px auto -10px auto;
   }
   footer {
@@ -205,7 +213,7 @@ header {
     height: 8vmin;
     width: 8vmin;
     border-radius: 50%;
-    border: 0.6vmin solid #000;
+    border: 0.6vmin solid #1b1b1b;
     box-shadow: 2px 2px 0 #2a75bb, 3px 3px 10px rgba(3, 7, 18, 0.541);
   }
 }
