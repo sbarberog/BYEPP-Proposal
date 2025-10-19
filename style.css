@@ -1,52 +1,37 @@
-@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
-
+@import url(https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap);
 body {
-  background: linear-gradient(180deg, #ffcb05 0%, #ff3636 30%, #00234b 100%);
-  /* background:#00234b; */
-  /* color: #222; */
+  background: linear-gradient(180deg, #ffcb05 0, #ff3636 30%, #00234b 100%);
   color: #2a75bb;
   margin: 0;
-  /* padding: 20px; */
   font-family: monospace;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
 h1,
 h2,
 h3 {
   text-align: center;
   font-family: "Press Start 2P", monospace;
 }
-
 h1,
 h2 {
-  /* font-size: 3em; */
   color: #ffcb05;
   text-shadow: 2px 2px 0 #2a75bb;
   max-width: 1200px;
   margin: 30px 40px;
 }
-
 h1 {
-  /* font-size: 1.5em; */
   text-shadow: 3px 3px 0 #155b9c;
-  /* margin-top: 20px; */
 }
-
 h3 {
   font-size: 14px;
-  /* color: #2a75bb; */
   color: #222;
-  /* text-shadow: 2px 2px 0 #ffcb05; */
 }
-
 .section {
-  background: #ffffff;
+  background: #fff;
   padding: 0 40px 40px 40px;
   margin: 15px 10px;
-  /* width: 90%; */
   max-width: 800px;
   border: 4px solid #2a75bb;
   border-radius: 20px;
@@ -54,15 +39,12 @@ h3 {
   border-left: none;
   box-shadow: 4px 4px 0 #ffcb05;
 }
-
 table {
   width: 100%;
   border-collapse: collapse;
-  /* font-size: 11px; */
   font-size: clamp(9px, 2vw, 14px);
-  font-weight: bold;
-  margin: 10px 0px;
-  /* background-color: rgba(113, 175, 255, 0.26); */
+  font-weight: 700;
+  margin: 10px 0;
   background-color: #ffcd05a2;
   max-width: 720px;
   margin: auto;
@@ -70,228 +52,163 @@ table {
   overflow-x: auto;
   box-shadow: 4px 4px 0 #ffcb05;
 }
-
-th,
-td {
+td,
+th {
   border: 2px solid #2a75bb;
   padding: 8px;
   text-align: center;
-  /* font-size: 15px; */
-  /* white-space: nowrap; */
 }
-
 th {
   background: #2a75bb;
   color: #ffcd05;
 }
-
 td:first-child {
-  font-weight: bold;
+  font-weight: 700;
   color: #d62828;
 }
-
-/* 
-    th {
-      background: #ffcb05;
-      color: #2a75bb;
-    }  */
-
 td:first-child {
-  font-weight: bold;
+  font-weight: 700;
   color: #d62828;
 }
-
 ul {
   list-style-type: "▶ ";
   padding-left: 20px;
   max-width: 700px;
   margin: auto;
 }
-
 ul ul {
   list-style-type: circle;
 }
-
 .highlight {
   color: #d62828;
-  font-weight: bold;
+  font-weight: 700;
 }
-
 .conclusion {
   background-color: #d62828;
-  color: white;
+  color: #fff;
 }
-
 .byepp {
   color: #155b9c;
   text-shadow: 3px 3px 0 #ffcb05;
 }
-
 footer {
   text-align: center;
   margin-top: 40px;
   margin-bottom: 20px;
-  /* font-size: 10px; */
   font-size: clamp(8px, 2vw, 10px);
   color: #f1f1f1;
 }
-
 h1 {
   font-size: clamp(16px, 4vw, 24px);
 }
-
 h2 {
   font-size: clamp(14px, 3vw, 16px);
-  /* margin-top: 40px; */
 }
-
 h3 {
   font-size: clamp(12px, 2.5vw, 14px);
   color: #2a75bb;
-  /* color: #222; */
 }
-
-p,
-li {
+li,
+p {
   font-size: clamp(10px, 2.2vw, 15px);
   line-height: 1.6;
 }
-
 .pokeball {
   height: 5vmin;
   width: 5vmin;
   border-radius: 50%;
-  border: 0.4vmin solid black;
+  border: 0.4vmin solid #000;
   background-image: radial-gradient(
       white 20%,
-      white 20%,
-      black 20%,
-      black 30%,
+      #fff 20%,
+      #000 20%,
+      #000 30%,
       transparent 30%,
       transparent
     ),
-    linear-gradient(red 46%, black 46%, black 54%, white 54%);
+    linear-gradient(red 46%, #000 46%, #000 54%, #fff 54%);
   margin: -10px auto 20px auto;
-  /* box-shadow: 3px 3px 10px rgba(3, 7, 18, 0.541); */
   box-shadow: 4px 4px 0 #2a75bb;
 }
-
 .poke-bottom {
   margin: 30px auto -10px auto;
   height: 8vmin;
   width: 8vmin;
   border-radius: 50%;
-  border: 0.6vmin solid black;
+  border: 0.6vmin solid #000;
 }
-
 header {
   background-color: #d62828;
   max-width: 1200px;
   position: sticky;
   top: 10px;
-    margin: 10px 10px 20px 10px;
-  padding: 0px;
+  margin: 10px 10px 20px 10px;
+  padding: 0;
   border-radius: 20px;
   overflow: auto;
   border: 4px solid #2a75bb;
   border-top: none;
   border-left: none;
-  /* border-left: none;
-  border-right: none; */
-  /* border-radius: 20px; */
-  /* https://smoothshadows.com/#djEsMSw1LDAuMjYsMTM0LDE4LDE4LCMwMzA3MTIsI2YzZjRmNiwjZmZmZmZmLDI%3D */
   box-shadow: 4px 4px 0 #ffcb05, 1px 1px 2px rgba(3, 7, 18, 0.05),
     3px 3px 8px rgba(3, 7, 18, 0.1), 6px 6px 19px rgba(3, 7, 18, 0.16),
     12px 12px 33px rgba(3, 7, 18, 0.21), 18px 18px 52px rgba(3, 7, 18, 0.26);
 }
-
 .back-to-top {
   display: flex;
   justify-content: center;
 }
-
-.emoji{
-    text-shadow: none;
-    margin-right: 10px;
+.emoji {
+  text-shadow: none;
+  margin-right: 10px;
 }
-
-/* 🌐 RESPONSIVE DESIGN */
 @media (max-width: 600px) {
   body {
     padding: 10px;
   }
-
   header {
     position: relative;
-    padding: 0px;
-    margin-top: 0px;
+    padding: 0;
+    margin-top: 0;
     margin-bottom: 20px;
   }
-
   .section {
     padding: 12px 12px 20px 12px;
     border-width: 2px;
     border-radius: 10px;
     margin: 10px auto;
-    /* width: 95%; */
   }
-
-  h1{
+  h1 {
     margin: 20px 5px;
   }
   h2,
   h3 {
     margin: 10px auto;
   }
-
-  th,
-  td {
+  td,
+  th {
     padding: 5px;
   }
-
   .pokeball {
     height: 12vmin;
     width: 12vmin;
     border-radius: 50%;
-    border: 1vmin solid black;
+    border: 1vmin solid #000;
     margin: -15px auto 10px auto;
   }
-
   footer {
     margin-top: 60px;
     margin-bottom: 5px;
   }
-
-  /* 
-      .poke-top {
-        position: sticky;
-        z-index: 99;
-        top: 0;
-        display: flex;
-        margin: -15px auto 10px auto;
-        overflow: auto;
-      } */
-  /* 
-      .back-to-top {
-        display: flex;
-        justify-content: center;
-      } */
-
   .poke-bottom {
     position: fixed;
     bottom: 45px;
-    /* display:flex; */
-    /* margin: 30px auto -10px auto; */
     height: 8vmin;
     width: 8vmin;
     border-radius: 50%;
-    border: 0.6vmin solid black;
-    /* box-shadow: 2px 2px 0 #2a75bb; */
+    border: 0.6vmin solid #000;
     box-shadow: 2px 2px 0 #2a75bb, 3px 3px 10px rgba(3, 7, 18, 0.541);
   }
 }
-
-/* Smooth scrolling IF user doesn't have a preference due to motion sensitivities */
 @media screen and (prefers-reduced-motion: no-preference) {
   html {
     scroll-behavior: smooth;
