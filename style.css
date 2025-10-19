@@ -210,6 +210,11 @@ header {
   justify-content: center;
 }
 
+.emoji{
+    text-shadow: none;
+    margin-right: 10px;
+}
+
 /* 🌐 RESPONSIVE DESIGN */
 @media (max-width: 600px) {
   body {
