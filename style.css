@@ -5,7 +5,7 @@
     background-size: cover;
 } */
 body {
-  background: linear-gradient(90deg, #2a75bb 0%, transparent 40%, transparent 60%, #2a75bb 100%),
+  background: linear-gradient(90deg, #2a75bb 0%, transparent 30%, transparent 70%, #2a75bb 100%),
   radial-gradient(white, transparent 20%),
     linear-gradient(180deg, #ffcb05 0, #ff3636 30%, #001b3a 100%);
   color: #2a75bb;
