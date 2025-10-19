@@ -209,7 +209,7 @@ header {
   }
   .poke-bottom {
     position: fixed;
-    bottom: 45px;
+    bottom: 60px;
     height: 8vmin;
     width: 8vmin;
     border-radius: 50%;
