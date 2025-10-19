@@ -127,7 +127,7 @@ p {
       transparent
     ),
     linear-gradient(red 46%, #000 46%, #000 54%, #fff 54%);
-  margin: -10px auto 20px auto;
+  margin: 20px auto -10px auto;
   box-shadow: 4px 4px 0 #2a75bb;
 }
 .poke-bottom {
@@ -193,7 +193,7 @@ header {
     width: 12vmin;
     border-radius: 50%;
     border: 1vmin solid #000;
-    margin: -15px auto 10px auto;
+    margin: 10px auto -10px auto;
   }
   footer {
     margin-top: 60px;
