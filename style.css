@@ -7,10 +7,10 @@
 body {
   background: linear-gradient(
       90deg,
-      #2a75bb 0%,
+      #23619b 0%,
       transparent 30%,
       transparent 70%,
-      #2a75bb 100%
+      #23619b 100%
     ),
     radial-gradient(white, transparent 20%),
     linear-gradient(180deg, #ffcb05 0, #ff3636 30%, #001b3a 100%);
@@ -105,9 +105,10 @@ ul ul {
   text-shadow: 3px 3px 0 #ffcb05;
 }
 footer {
+  height: 70px;
   text-align: center;
-  margin-top: 40px;
-  margin-bottom: 20px;
+  margin-top: 80px;
+  /* margin-bottom: 20px; */
   font-size: clamp(8px, 2vw, 10px);
   color: #f1f1f1;
 }
@@ -126,9 +127,15 @@ p {
   font-size: clamp(10px, 2.2vw, 15px);
   line-height: 1.6;
 }
-.pokeball {
+.wrapper{
+  position: relative;
   height: 5vmin;
   width: 5vmin;
+  margin: 20px auto 0px auto;
+}
+.pokeball {
+  height: 100%;
+  width: 100%;
   border-radius: 50%;
   border: 0.4vmin solid #1b1b1b;
   background-image: radial-gradient(
@@ -140,8 +147,17 @@ p {
       transparent
     ),
     linear-gradient(red 46%, #1b1b1b 46%, #1b1b1b 54%, #fff 54%);
-  margin: 20px auto -10px auto;
-  box-shadow: 4px 4px 0 #2a75bb;
+  position:absolute;
+  z-index: 1;
+}
+.dummy{
+  /* border: 0.4vmin solid transparent; */
+  height: 110%;
+  width: 110%;
+  border-radius: 50%;
+  box-shadow: .5vw .5vw 0 #2a75bb;
+  position: absolute;
+  z-index: 0;
 }
 .poke-bottom {
   margin: 30px auto -10px auto;
@@ -150,7 +166,7 @@ p {
   border-radius: 50%;
   border: 0.6vmin solid #1b1b1b;
   transition: translate 0.3s;
-  box-shadow: 5px 5px 0 #2a75bb, 0px 0px 20px rgba(249, 251, 255, 0.541);
+  box-shadow: 0px 0px 20px rgba(249, 251, 255, 0.541);
 }
 .poke-bottom:hover {
   translate: 0px -20px;
@@ -167,13 +183,14 @@ header {
   border: 4px solid #2a75bb;
   border-top: none;
   border-left: none;
-  box-shadow: 4px 4px 0 #ffcb05, 1px 1px 2px rgba(3, 7, 18, 0.05),
-    3px 3px 8px rgba(3, 7, 18, 0.1), 6px 6px 19px rgba(3, 7, 18, 0.16),
-    12px 12px 33px rgba(3, 7, 18, 0.21), 18px 18px 52px rgba(3, 7, 18, 0.26);
+  box-shadow: 4px 4px 0 #ffcb05, 1px 1px 2px rgba(3, 7, 18, 0.116),
+    3px 3px 8px rgba(3, 7, 18, 0.171), 6px 6px 19px rgba(3, 7, 18, 0.514);
+    /* 12px 12px 33px rgba(3, 7, 18, 0.21), 18px 18px 52px rgba(3, 7, 18, 0.26); */
 }
 .back-to-top {
   display: flex;
   justify-content: center;
+  bottom: 30px;
 }
 .emoji {
   text-shadow: none;
@@ -207,25 +224,35 @@ header {
   th {
     padding: 5px;
   }
-  .pokeball {
+  .wrapper{
     height: 12vmin;
     width: 12vmin;
+    margin: 15px auto 0px auto;
+  }
+  .pokeball {
+    height: 100%;
+    width: 100%;
     border-radius: 50%;
     border: 1vmin solid #1b1b1b;
-    margin: 10px auto -10px auto;
+  }
+  .dummy{
+  box-shadow: 1.6vw 1.6vw 0 #2a75bb;
   }
   footer {
-    margin-top: 60px;
+    height: 10%;
+    margin-top: 80px;
     margin-bottom: 5px;
   }
-  .poke-bottom {
+  .back-to-top{
     position: fixed;
-    bottom: 60px;
+    bottom: 80px;
+  }
+  .poke-bottom {
     height: 10vmin;
     width: 10vmin;
     border-radius: 50%;
     border: 0.8vmin solid #1b1b1b;
-    box-shadow: 4px 4px 0 #2a75bb, 0px 0px 10px rgba(249, 251, 255, 0.541);
+    box-shadow: 0px 0px 14px rgba(249, 251, 255, 0.767);
   }
   .poke-bottom:hover{
     translate:none;
