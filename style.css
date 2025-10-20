@@ -165,11 +165,12 @@ p {
   width: 8vmin;
   border-radius: 50%;
   border: 0.6vmin solid #1b1b1b;
-  transition: translate 0.3s;
-  box-shadow: 0px 0px 20px rgba(249, 251, 255, 0.541);
+  transition: translate 0.3s, box-shadow 0.3s;
+  box-shadow: 0px 0px 20px rgba(249, 251, 255, 0.226);
 }
 .poke-bottom:hover {
-  translate: 0px -20px;
+  translate: 0px -40px;
+  box-shadow: 0px 0px 40px rgba(249, 251, 255, 0.637);
 }
 header {
   background-color: #d62828;
