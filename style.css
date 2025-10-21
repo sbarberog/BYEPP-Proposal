@@ -208,6 +208,7 @@ header {
   /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
   user-select: none;
   touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
   cursor: pointer;
   transition: 0.3s ease;
 }
@@ -284,7 +285,10 @@ header {
   .back-to-top {
     position: fixed;
     bottom: 100px;
-    transition: none !important;
+    /* transition: none !important; */
+  }
+  .back-to-top:hover{
+    /* transition: none !important; */
   }
   /* .back-to-top:active {
     transform: translateY(-50px);
@@ -320,5 +324,11 @@ header {
 @media screen and (prefers-reduced-motion: no-preference) {
   html {
     scroll-behavior: smooth;
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .back-to-top:hover {
+    transform: none !important;
   }
 }
