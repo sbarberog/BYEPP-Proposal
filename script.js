@@ -27,7 +27,7 @@ function disableHoverOnMobile() {
           transform:none;
         }
         .poke-bottom, .poke-bottom:hover{
-        box-shadow: 0px 0px 20px rgba(249, 251, 255, 0.226);
+        box-shadow: 0px 0px 20px #f9fbff50;
         transition:none
         }
       `;
