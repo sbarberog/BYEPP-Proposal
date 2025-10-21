@@ -25,6 +25,7 @@ function disableHoverOnMobile() {
         .back-to-top, .back-to-top:hover {
           scale:none;
         }
+        .poke-bottom{transition:none}
       `;
         document.head.appendChild(style);
         console.log("Mobile detected, disabled hover style...");
