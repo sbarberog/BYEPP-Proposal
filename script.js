@@ -1,13 +1,4 @@
-
-
-let pageHeight = document.body.scrollHeight;
-let windowHeight = window.innerHeight;
-// console.log(pageHeight, innerHeight);
-
-window.onscroll = function () {
-    scrollRotate();
-    // console.log(window.pageYOffset);
-}
+let pageHeight, windowHeight;
 
 function scrollRotate() {
     let pokeball = document.querySelectorAll(".pokeball");
@@ -15,4 +6,18 @@ function scrollRotate() {
     pokeball.forEach(element => {
         element.style.transform = "rotate(" + percent * 360 + "deg)";
     });
+}
+
+function getWindowSize() {
+    pageHeight = document.body.scrollHeight;
+    windowHeight = window.innerHeight;
+    console.log(pageHeight, innerHeight);
+}
+
+window.onload = getWindowSize;
+window.onresize = getWindowSize;
+
+window.onscroll = function () {
+    scrollRotate();
+    // console.log(window.pageYOffset);
 }
