@@ -32,13 +32,14 @@ function disableHoverOnMobile() {
         const style = document.createElement('style');
         style.innerHTML = `
         .back-to-top, .back-to-top:hover {
-          transform: none !important;
-          transition: none !important;
           scale:none;
+        }
+        .animar {
+        animation: mover 0.5s ease;
         }
       `;
         document.head.appendChild(style);
-        console.log("Disabled hover style");
+        console.log("Mobile detected, disabled hover style...");
     }
 }
 
