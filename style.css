@@ -292,9 +292,9 @@ header {
     bottom: 100px;
     /* transition: none !important; */
   }
-  .back-to-top:hover{
-    /* transition: none !important; */
-  }
+  /* .back-to-top:hover{
+    transition: none !important;
+  } */
   /* .back-to-top:active {
     transform: translateY(-50px);
     transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -304,6 +304,10 @@ header {
     border-radius: 50%;
     border: 4px solid #1b1b1b;
     box-shadow: 0px 0px 14px rgba(249, 251, 255, 0.767);
+    transition:none !important;
+  }
+  .poke-bottom:hover{
+    transition: none;
   }
   .back-to-top .yellow-spot {
     margin-right: 50px;

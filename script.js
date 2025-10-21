@@ -25,7 +25,10 @@ function disableHoverOnMobile() {
         .back-to-top, .back-to-top:hover {
           scale:none;
         }
-        .poke-bottom{transition:none}
+        .poke-bottom, .poke-bottom:hover{
+        box-shadow: 0px 0px 20px rgba(249, 251, 255, 0.226);
+        transition:none
+        }
       `;
         document.head.appendChild(style);
         console.log("Mobile detected, disabled hover style...");
