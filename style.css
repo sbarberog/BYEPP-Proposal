@@ -209,14 +209,14 @@ header {
   user-select: none;
   touch-action: manipulation;
   -webkit-tap-highlight-color: transparent;
-  cursor: pointer; 
-  /* transition: 0.3s ease; */
+  cursor: pointer;
+  transition: 0.3s ease;
 }
-/* .back-to-top:hover {
+.back-to-top:hover {
   scale: 1.5;
   transform: translateY(-20px);
   transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
-} */
+}
 .back-to-top .yellow-spot {
   margin-right: 45px;
   margin-top: 40px;
@@ -224,6 +224,20 @@ header {
 .emoji {
   text-shadow: none;
   margin-right: 10px;
+}
+.animar {
+  animation: mover 0.5s ease;
+}
+@keyframes mover {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 @media (max-width: 600px) {
@@ -278,27 +292,13 @@ header {
     bottom: 100px;
     /* transition: none !important; */
   }
-  /* .back-to-top:hover{
-    transition: none !important;
-  } */
+  .back-to-top:hover{
+    /* transition: none !important; */
+  }
   /* .back-to-top:active {
     transform: translateY(-50px);
     transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
   } */
-  .animar {
-    animation: mover 0.5s ease;
-  }
-  @keyframes mover {
-    0% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-50px);
-    }
-    100% {
-      transform: translateY(0);
-    }
-  }
   .poke-bottom {
     position: absolute;
     border-radius: 50%;
@@ -316,9 +316,9 @@ header {
     scroll-behavior: smooth;
   }
 }
-
+/* 
 @media (hover: none) and (pointer: coarse) {
   .back-to-top:hover {
     transform: none !important;
   }
-}
+} */
