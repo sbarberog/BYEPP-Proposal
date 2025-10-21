@@ -217,15 +217,6 @@ header {
   transform: translateY(-20px);
   transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
 }
-/* .animar {
-  animation: mover 0.5s ease;
-}  */
-/* Animación de ida y vuelta */
-/* @keyframes mover {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-100px); }
-  100% { transform: translateY(0); }
-} */
 .back-to-top .yellow-spot {
   margin-right: 45px;
   margin-top: 40px;
@@ -285,10 +276,10 @@ header {
   .back-to-top {
     position: fixed;
     bottom: 100px;
-    /* transition: none !important; */
+    transition: none !important;
   }
   .back-to-top:hover{
-    /* transition: none !important; */
+    transition: none !important;
   }
   /* .back-to-top:active {
     transform: translateY(-50px);

@@ -23,6 +23,23 @@ window.onscroll = function () {
     // console.log(window.pageYOffset);
 }
 
+// deactivate hover style on mobile
+function disableHoverOnMobile() {
+    // Detección básica de dispositivos táctiles
+    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
+    if (isTouchDevice) {
+        const style = document.createElement('style');
+        style.innerHTML = `
+        .back-to-top:hover {
+          transform: none !important;
+          transition: none !important;
+        }
+      `;
+        document.head.appendChild(style);
+    }
+}
+
 backToTop.addEventListener('click', () => {
     backToTop.classList.add('animar');
 
@@ -31,3 +48,6 @@ backToTop.addEventListener('click', () => {
         backToTop.classList.remove('animar');
     }, 400); // duración igual a la animación CSS
 });
+
+// Ejecutar al cargar la página
+disableHoverOnMobile();
