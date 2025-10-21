@@ -171,16 +171,14 @@ p {
   rotate: -25deg;
 }
 .poke-bottom {
+  height: 100%;
+  width: 100%;
   margin: 30px auto -10px auto;
-  height: 8vmin;
-  width: 8vmin;
   border-radius: 50%;
   border: 0.6vmin solid #1b1b1b;
-  transition: translate 0.3s, box-shadow 0.3s;
   box-shadow: 0px 0px 20px rgba(249, 251, 255, 0.226);
 }
 .poke-bottom:hover {
-  translate: 0px -40px;
   box-shadow: 0px 0px 40px rgba(249, 251, 255, 0.637);
 }
 header {
@@ -200,9 +198,20 @@ header {
     /* 12px 12px 33px rgba(3, 7, 18, 0.21), 18px 18px 52px rgba(3, 7, 18, 0.26); */
 }
 .back-to-top {
+  height: 80px;
+  width: 80px;
+  position:relative;
   display: flex;
   justify-content: center;
   bottom: 30px;
+  transition: translate 0.3s, box-shadow 0.3s;
+}
+.back-to-top:hover{
+  translate: 0px -40px;
+}
+.back-to-top .yellow-spot{
+  margin-right: 45px;
+  margin-top: 40px;
 }
 .emoji {
   text-shadow: none;
@@ -258,7 +267,7 @@ header {
   }
   .back-to-top{
     position: fixed;
-    bottom: 80px;
+    bottom: 90px;
   }
   .poke-bottom {
     position:relative;
