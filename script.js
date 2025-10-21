@@ -15,15 +15,6 @@ function getWindowSize() {
     console.log(pageHeight, innerHeight);
 }
 
-window.onload = getWindowSize;
-window.onresize = getWindowSize;
-
-window.onscroll = function () {
-    scrollRotate();
-    // console.log(window.pageYOffset);
-}
-
-
 function disableHoverOnMobile() {
     // Detección básica de dispositivos táctiles
     const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
@@ -34,20 +25,26 @@ function disableHoverOnMobile() {
         .back-to-top, .back-to-top:hover {
           scale:none;
         }
-        .animar {
-        animation: mover 0.5s ease;
-        }
       `;
         document.head.appendChild(style);
         console.log("Mobile detected, disabled hover style...");
     }
 }
 
+window.onload = getWindowSize;
+window.onresize = getWindowSize;
+
+window.onscroll = function () {
+    scrollRotate();
+    // console.log(window.pageYOffset);
+}
+
 // Ejecutar al cargar la página
-disableHoverOnMobile();
+// disableHoverOnMobile();
 
 backToTop.addEventListener('click', () => {
     backToTop.classList.add('animar');
+    console.log("animando...");
 
     // Espera el tiempo de la animación y luego quita la clase
     setTimeout(() => {
