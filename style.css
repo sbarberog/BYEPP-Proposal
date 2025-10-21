@@ -159,6 +159,16 @@ p {
   position: absolute;
   z-index: 0;
 }
+.yellow-spot{
+  margin-left: 30%;
+  margin-top: 14%;
+  position: absolute;
+  z-index: 2;
+  width: 20%;
+  height: 20%;
+  border-radius: 50%;
+  background: #ffcd05e8;
+}
 .poke-bottom {
   margin: 30px auto -10px auto;
   height: 8vmin;
@@ -197,6 +207,7 @@ header {
   text-shadow: none;
   margin-right: 10px;
 }
+
 @media (max-width: 600px) {
   body {
     padding: 10px;
@@ -249,6 +260,7 @@ header {
     bottom: 80px;
   }
   .poke-bottom {
+    position:relative;
     height: 10vmin;
     width: 10vmin;
     border-radius: 50%;
