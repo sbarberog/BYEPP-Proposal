@@ -1,4 +1,5 @@
 let pageHeight, windowHeight;
+const backToTop = document.querySelector('.back-to-top');
 
 function scrollRotate() {
     let pokeball = document.querySelectorAll(".pokeball");
@@ -21,3 +22,12 @@ window.onscroll = function () {
     scrollRotate();
     // console.log(window.pageYOffset);
 }
+
+backToTop.addEventListener('click', () => {
+    backToTop.classList.add('animar');
+
+    // Espera el tiempo de la animación y luego quita la clase
+    setTimeout(() => {
+        backToTop.classList.remove('animar');
+    }, 400); // duración igual a la animación CSS
+});

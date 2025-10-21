@@ -177,6 +177,7 @@ p {
   border-radius: 50%;
   border: 0.6vmin solid #1b1b1b;
   box-shadow: 0px 0px 20px rgba(249, 251, 255, 0.226);
+  transition: box-shadow 0.3s ease;
 }
 .poke-bottom:hover {
   box-shadow: 0px 0px 40px rgba(249, 251, 255, 0.637);
@@ -207,17 +208,23 @@ header {
   /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
   user-select: none;
   touch-action: manipulation;
+  cursor: pointer;
+  transition: 0.3s ease;
 }
-.back-to-top:active {
-  /* transform: translateY(-100px); */
+.back-to-top:hover {
+  scale: 1.5;
+  transform: translateY(-20px);
+  transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+/* .animar {
   animation: mover 0.5s ease;
-}
+}  */
 /* Animación de ida y vuelta */
-@keyframes mover {
+/* @keyframes mover {
   0% { transform: translateY(0); }
   50% { transform: translateY(-100px); }
   100% { transform: translateY(0); }
-}
+} */
 .back-to-top .yellow-spot {
   margin-right: 45px;
   margin-top: 40px;
@@ -277,29 +284,33 @@ header {
   .back-to-top {
     position: fixed;
     bottom: 100px;
-    /* transition: transform 0.2s ease; */
+    transition: none !important;
   }
   /* .back-to-top:active {
     transform: translateY(-50px);
     transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
   } */
-   
-@keyframes mover {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-50px); }
-  100% { transform: translateY(0); }
-}
+
+  .animar {
+    animation: mover 0.5s ease;
+  }
+  @keyframes mover {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-50px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
   .poke-bottom {
     position: absolute;
-    /* height: 60px;
-    width: 60px; */
     border-radius: 50%;
     border: 4px solid #1b1b1b;
     box-shadow: 0px 0px 14px rgba(249, 251, 255, 0.767);
   }
-  /* .poke-bottom:hover{
-    touch-action:none;
-  } */
   .back-to-top .yellow-spot {
     margin-right: 50px;
     margin-top: 37px;
