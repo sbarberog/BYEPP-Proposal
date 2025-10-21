@@ -12,7 +12,7 @@ function scrollRotate() {
 function getWindowSize() {
     pageHeight = document.body.scrollHeight;
     windowHeight = window.innerHeight;
-    console.log(pageHeight, innerHeight);
+    // console.log(pageHeight, innerHeight);
 }
 
 function disableHoverOnMobile() {
@@ -32,7 +32,7 @@ function disableHoverOnMobile() {
         }
       `;
         document.head.appendChild(style);
-        console.log("Mobile detected, disabled hover style...");
+        // console.log("Mobile detected, disabled hover style...");
     }
 }
 
@@ -49,7 +49,7 @@ disableHoverOnMobile();
 
 backToTop.addEventListener('click', () => {
     backToTop.classList.add('animar');
-    console.log("animando...");
+    // console.log("animando...");
 
     // Espera el tiempo de la animación y luego quita la clase
     setTimeout(() => {
