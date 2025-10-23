@@ -1,5 +1,7 @@
 let pageHeight, windowHeight;
 const backToTop = document.querySelector('.back-to-top');
+const mediaQuery = window.matchMedia('(max-width: 600px)');
+const style = document.createElement('style');
 
 function scrollRotate() {
     let pokeball = document.querySelectorAll(".pokeball");
@@ -9,32 +11,58 @@ function scrollRotate() {
     });
 }
 
+function botar(e) {
+    e.stopPropagation();
+    backToTop.classList.add('botar');
+    // console.log("animando...");
+    // Espera el tiempo de la animación y luego quita la clase
+    setTimeout(() => {
+        backToTop.classList.remove('botar');
+    }, 400); // duración igual a la animación CSS
+};
+
+// function crecer(e) {
+//     e.target.classList.add('crecer');
+// };
+
+function handleMediaChange() {
+
+    if (mediaQuery.matches) {
+        backToTop.addEventListener('click', botar);
+        style.innerHTML='';
+        console.log("Style: mobile");
+    }
+    else {
+        backToTop.removeEventListener('click',botar);
+        // backToTop.addEventListener('hover', crecer);
+        style.innerHTML = `
+            .back-to-top {
+                transition: 0.3s ease
+            }
+            .back-to-top:hover {
+                scale: 1.5;
+                transform: translateY(-20px);
+                transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
+            }
+            .poke-bottom {
+                transition: box-shadow 0.3s ease;}
+            .poke-bottom:hover {
+                box-shadow: 0px 0px 40px rgba(249, 251, 255, 0.637);
+            }
+            `;
+        console.log("Style: desktop");
+    }
+}
+
 function getWindowSize() {
     pageHeight = document.body.scrollHeight;
     windowHeight = window.innerHeight;
     // console.log(pageHeight, innerHeight);
 }
 
-function disableHoverOnMobile() {
-    // Detección básica de dispositivos táctiles
-    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+document.head.appendChild(style);
 
-    if (isTouchDevice) {
-        const style = document.createElement('style');
-        style.innerHTML = `
-        .back-to-top, .back-to-top:hover {
-          scale:none;
-          transform:none;
-        }
-        .poke-bottom, .poke-bottom:hover{
-        box-shadow: 0px 0px 20px #f9fbff50;
-        transition:none
-        }
-      `;
-        document.head.appendChild(style);
-        // console.log("Mobile detected, disabled hover style...");
-    }
-}
+handleMediaChange(mediaQuery);
 
 window.onload = getWindowSize;
 window.onresize = getWindowSize;
@@ -44,15 +72,5 @@ window.onscroll = function () {
     // console.log(window.pageYOffset);
 }
 
-// Ejecutar al cargar la página
-disableHoverOnMobile();
+mediaQuery.addEventListener('change', handleMediaChange);
 
-backToTop.addEventListener('click', () => {
-    backToTop.classList.add('animar');
-    // console.log("animando...");
-
-    // Espera el tiempo de la animación y luego quita la clase
-    setTimeout(() => {
-        backToTop.classList.remove('animar');
-    }, 400); // duración igual a la animación CSS
-});
