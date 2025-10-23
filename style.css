@@ -281,9 +281,9 @@ header {
     box-shadow: 1.6vw 1.6vw 0 #2a75bb;
   }
   footer {
-    /* height: 30px; */
-    margin-top: 120px;
-    /* margin-bottom: 30px; */
+    height: 30px;
+    margin-top: 80px;
+    margin-bottom: 0px;
   }
   .back-to-top {
     position: fixed;
