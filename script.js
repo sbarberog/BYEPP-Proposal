@@ -37,7 +37,7 @@ function handleMediaChange() {
         // backToTop.addEventListener('hover', crecer);
         style.innerHTML = `
             .back-to-top {
-                transition: 0.3s ease
+                transition: 0.3s ease;
             }
             .back-to-top:hover {
                 scale: 1.5;
