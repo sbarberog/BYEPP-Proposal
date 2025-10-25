@@ -1,10 +1,10 @@
 let pageHeight, windowHeight;
 const backToTop = document.querySelector('.back-to-top');
+const pokeball = document.querySelectorAll(".pokeball");
 const mediaQuery = window.matchMedia('(max-width: 600px)');
 const style = document.createElement('style');
 
 function scrollRotate() {
-    let pokeball = document.querySelectorAll(".pokeball");
     percent = window.pageYOffset / (pageHeight - windowHeight);
     pokeball.forEach(element => {
         element.style.transform = "rotate(" + percent * 360 + "deg)";
@@ -29,11 +29,11 @@ function handleMediaChange() {
 
     if (mediaQuery.matches) {
         backToTop.addEventListener('click', botar);
-        style.innerHTML='';
+        style.innerHTML = '';
         console.log("Style: mobile");
     }
     else {
-        backToTop.removeEventListener('click',botar);
+        backToTop.removeEventListener('click', botar);
         // backToTop.addEventListener('hover', crecer);
         style.innerHTML = `
             .back-to-top {
@@ -68,7 +68,9 @@ window.onload = getWindowSize;
 window.onresize = getWindowSize;
 
 window.onscroll = function () {
-    scrollRotate();
+    setTimeout(() => {
+        scrollRotate();
+    }, 100);
     // console.log(window.pageYOffset);
 }
 
