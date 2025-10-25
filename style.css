@@ -51,8 +51,9 @@ h3 {
   border-top: none;
   border-left: none;
   box-shadow: 4px 4px 0 #ffcb05;
-  transition: .3s ease;
+  transition: 0.3s ease;
   z-index: 0;
+  scroll-margin-top: 300px;
 }
 .section:hover {
   z-index: 1;
@@ -159,7 +160,7 @@ p {
     linear-gradient(red 46%, #1b1b1b 46%, #1b1b1b 54%, #fff 54%);
   position: absolute;
 }
-.pokeball-end{
+.pokeball-end {
   background-image: radial-gradient(
       #87f1ff 20%,
       #87f1ff 20%,
@@ -277,6 +278,7 @@ header {
     border-width: 2px;
     border-radius: 10px;
     margin: 10px auto;
+    scroll-margin-top: none;
   }
   .section:hover {
     pointer-events: none;
