@@ -51,6 +51,8 @@ function handleMediaChange() {
             .poke-bottom:hover {
                 box-shadow: 0px 0px 40px rgba(249, 251, 255, 0.637);
             }
+            .section:hover {
+                color: #1b1b1b;}
             @media (min-width: 1100px) {
             .section:hover {
                 // background: #fff;
@@ -62,6 +64,8 @@ function handleMediaChange() {
                 box-shadow: 4px 4px 0 #ffcb05, 1px 1px 2px rgba(3, 7, 18, 0.116),
                     3px 3px 8px rgba(3, 7, 18, 0.171), 6px 6px 19px rgba(3, 7, 18, 0.514);
             }}
+            .conclusion:hover {
+                color: #ffffff;}
             `;
         console.log("Style: desktop");
     }
