@@ -51,13 +51,17 @@ function handleMediaChange() {
             .poke-bottom:hover {
                 box-shadow: 0px 0px 40px rgba(249, 251, 255, 0.637);
             }
+            @media (min-width: 1100px) {
             .section:hover {
+                // background: #fff;
+                padding: 0px 100px 40px 100px;
+                // max-width: 1100px;
                 z-index: 1;
-                scale: 1.2;
+                // scale: 1.1;
                 transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
                 box-shadow: 4px 4px 0 #ffcb05, 1px 1px 2px rgba(3, 7, 18, 0.116),
                     3px 3px 8px rgba(3, 7, 18, 0.171), 6px 6px 19px rgba(3, 7, 18, 0.514);
-            }
+            }}
             `;
         console.log("Style: desktop");
     }
