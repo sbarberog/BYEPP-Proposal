@@ -8,6 +8,12 @@ function scrollRotate() {
     percent = window.pageYOffset / (pageHeight - windowHeight);
     pokeball.forEach(element => {
         element.style.transform = "rotate(" + percent * 360 + "deg)";
+        if(percent==1){
+            element.classList.add('pokeball-end');
+        }
+        else{
+            element.classList.remove('pokeball-end');
+        }
     });
 }
 

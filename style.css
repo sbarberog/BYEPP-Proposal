@@ -159,6 +159,17 @@ p {
     linear-gradient(red 46%, #1b1b1b 46%, #1b1b1b 54%, #fff 54%);
   position: absolute;
 }
+.pokeball-end{
+  background-image: radial-gradient(
+      #87f1ff 20%,
+      #87f1ff 20%,
+      #1b1b1b 20%,
+      #1b1b1b 30%,
+      transparent 30%,
+      transparent
+    ),
+    linear-gradient(red 46%, #1b1b1b 46%, #1b1b1b 54%, #fff 54%);
+}
 .dummy {
   /* border: 0.4vmin solid transparent; */
   height: 110%;
