@@ -265,7 +265,6 @@ header {
 @media (max-width: 600px) {
   body {
     padding: 10px;
-    /* background: linear-gradient(180deg, #ffcb05 0, #ff3636 30%, #00234b 100%); */
   }
   header {
     position: relative;
@@ -278,11 +277,12 @@ header {
     border-width: 2px;
     border-radius: 10px;
     margin: 10px auto;
-    scroll-margin-top: none;
+    scroll-margin-top: auto;
+    /* pointer-events: none; */
   }
   .section:hover {
     pointer-events: none;
-    /* scale: none; */
+    scale: none;
   }
   h1 {
     margin: 20px 5px;

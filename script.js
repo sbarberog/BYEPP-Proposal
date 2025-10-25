@@ -27,10 +27,6 @@ function botar(e) {
     }, 400); // duración igual a la animación CSS
 };
 
-// function crecer(e) {
-//     e.target.classList.add('crecer');
-// };
-
 function handleMediaChange() {
 
     if (mediaQuery.matches) {
@@ -74,6 +70,7 @@ window.onload = getWindowSize;
 window.onresize = getWindowSize;
 
 window.onscroll = function () {
+    // set time delay to avoid incorrect detection of scroll %
     setTimeout(() => {
         scrollRotate();
     }, 100);
