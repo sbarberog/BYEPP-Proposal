@@ -85,7 +85,7 @@ window.onload = getWindowSize;
 window.onresize = getWindowSize;
 
 window.onscroll = function () {
-    // set time delay to avoid incorrect detection of scroll %
+    // set time delay to avoid incorrect detection of scroll % on mobile browsers
     setTimeout(() => {
         scrollRotate();
     }, 100);
