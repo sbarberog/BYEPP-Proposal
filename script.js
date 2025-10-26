@@ -52,7 +52,8 @@ function handleMediaChange() {
                 box-shadow: 0px 0px 40px rgba(249, 251, 255, 0.637);
             }
             .section:hover {
-                color: #1b1b1b;}
+                color: #1b1b1b;
+            }
             @media (min-width: 1100px) {
             .section:hover {
                 // background: #fff;
