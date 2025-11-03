@@ -4,15 +4,17 @@ const pokeball = document.querySelectorAll(".pokeball");
 const mediaQuery = window.matchMedia('(max-width: 600px)');
 const style = document.createElement('style');
 
-function scrollRotate() {
+function scrollAction() {
     percent = window.pageYOffset / (pageHeight - windowHeight);
     pokeball.forEach(element => {
         element.style.transform = "rotate(" + percent * 360 + "deg)";
-        if (percent == 1) {
+        if (percent > 0.98) {
             element.classList.add('pokeball-end');
+            backToTop.classList.add("end-position");
         }
         else {
             element.classList.remove('pokeball-end');
+            backToTop.classList.remove("end-position");
         }
     });
 }
@@ -39,9 +41,10 @@ function handleMediaChange() {
         // backToTop.addEventListener('hover', crecer);
         style.innerHTML = `
             .back-to-top {
-                transition: 0.3s ease;
+                // transition: 0.3s ease;
             }
             .back-to-top:hover {
+                transition: 0.3s ease;
                 scale: 1.5;
                 transform: translateY(-20px);
                 transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -88,8 +91,8 @@ window.onresize = getWindowSize;
 window.onscroll = function () {
     // set time delay to avoid incorrect detection of scroll % on mobile browsers
     setTimeout(() => {
-        scrollRotate();
-    }, 100);
+        scrollAction();
+    }, 50);
     // console.log(window.pageYOffset);
 }
 
