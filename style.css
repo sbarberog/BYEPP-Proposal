@@ -460,12 +460,38 @@ header {
   font-style: italic;
   text-align: center;
 }
+/* Contenedor de flechas */
+.controls {
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  width: 100%;
+}
 
-.close:hover,
+.controls span {
+  background: rgba(0, 0, 0, 0.5); /* fondo semitransparente */
+  padding: 10px 15px;
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+
+.controls span:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+/* Quita posición absoluta individual de .prev y .next */
+.prev, .next {
+  position: static;
+}
+
+
+/* .close:hover,
 .prev:hover,
 .next:hover {
   color: #ccc;
-}
+} */
 @media (max-width: 768px) {
   .gallery img {
     width: 45%; /* 2 por fila en tablets */
@@ -476,20 +502,5 @@ header {
   .gallery img {
     width: 90%; /* 1 por fila en móviles */
   }
-
-  /* 🔧 Ajuste para que no se superpongan las flechas */
-  .prev,
-  .next {
-    font-size: 1.8rem;
-    top: auto;
-    bottom: 20px; /* las movemos hacia abajo */
-    transform: none;
-  }
-
-  .prev {
-    left: 25%;
-  } /* más separadas del centro */
-  .next {
-    right: 25%;
-  }
+  
 }

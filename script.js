@@ -9,6 +9,8 @@ const images = [
     { src: "img/byepp-explanation.jpg", caption: "HUD explanation" }
   ];
 let current = 0;
+let startX = 0;
+const lightboxImg = document.getElementById("lightbox-img");
 
 function scrollAction() {
     percent = window.pageYOffset / (pageHeight - windowHeight);
@@ -141,4 +143,19 @@ document.addEventListener("keydown", (e) => {
         if (e.key === "ArrowRight") changeImage(1);
         if (e.key === "Escape") closeLightbox();
     }
+});
+
+// Control táctil (swipe)
+
+lightboxImg.addEventListener("touchstart", (e) => {
+  startX = e.touches[0].clientX;
+});
+
+lightboxImg.addEventListener("touchend", (e) => {
+  const endX = e.changedTouches[0].clientX;
+  const diff = startX - endX;
+  if (Math.abs(diff) > 50) { // umbral de deslizamiento
+    if (diff > 0) changeImage(1);   // desliza izquierda → siguiente
+    else changeImage(-1);           // desliza derecha → anterior
+  }
 });
