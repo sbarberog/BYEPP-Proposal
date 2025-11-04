@@ -410,11 +410,12 @@ header {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  user-select: none;
 }
 
 .lightbox img {
   max-width: 90%;
-  max-height: 80vh;
+  max-height: 75vh;
   border-radius: 10px;
 }
 
@@ -449,6 +450,7 @@ header {
   margin-top: 15px;
   font-size: 1.1rem;
   text-align: center;
+  padding: 0 20px;
 }
 .gallery-caption {
   /* color: #2a75bb; */
@@ -474,10 +476,20 @@ header {
   .gallery img {
     width: 90%; /* 1 por fila en móviles */
   }
+
+  /* 🔧 Ajuste para que no se superpongan las flechas */
   .prev,
   .next {
-    font-size: 1.5rem;
-    left: 20px;
-    right: 20px;
+    font-size: 1.8rem;
+    top: auto;
+    bottom: 20px; /* las movemos hacia abajo */
+    transform: none;
+  }
+
+  .prev {
+    left: 25%;
+  } /* más separadas del centro */
+  .next {
+    right: 25%;
   }
 }
