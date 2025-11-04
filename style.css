@@ -461,31 +461,45 @@ header {
   text-align: center;
 }
 /* Contenedor de flechas */
-.controls {
+/* .controls {
   position: absolute;
   bottom: 20px;
   display: flex;
   justify-content: center;
   gap: 50px;
   width: 100%;
-}
+} */
 
-.controls span {
-  background: rgba(0, 0, 0, 0.5); /* fondo semitransparente */
-  padding: 10px 15px;
+/* .controls span {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 5px 20px;
   border-radius: 50%;
   transition: background 0.3s;
 }
 
 .controls span:hover {
   background: rgba(0, 0, 0, 0.7);
+} */
+
+/* Posición lateral por defecto (modo escritorio) */
+.prev,
+.next {
+  position: absolute;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  user-select: none;
+  font-weight: bold;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-/* Quita posición absoluta individual de .prev y .next */
-.prev, .next {
-  position: static;
+.prev {
+  left: 50px;
 }
-
+.next {
+  right: 50px;
+}
 
 /* .close:hover,
 .prev:hover,
@@ -496,11 +510,31 @@ header {
   .gallery img {
     width: 45%; /* 2 por fila en tablets */
   }
+  /* Contenedor con fondo solo en móviles */
+  .controls {
+    position: absolute;
+    bottom: 80px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    width: 100%;
+  }
+  .controls span {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px 20px;
+    border-radius: 50%;
+  }
+
+  /* En móviles, quitamos la posición lateral */
+  .prev,
+  .next {
+    position: static;
+    transform: none;
+  }
 }
 
 @media (max-width: 480px) {
   .gallery img {
     width: 90%; /* 1 por fila en móviles */
   }
-  
 }

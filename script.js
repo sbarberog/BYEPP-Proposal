@@ -7,7 +7,7 @@ const style = document.createElement('style');
 const images = [
     { src: "img/byepp-hud.jpg", caption: "HUD example" },
     { src: "img/byepp-explanation.jpg", caption: "HUD explanation" }
-  ];
+];
 let current = 0;
 let startX = 0;
 const lightboxImg = document.getElementById("lightbox-img");
@@ -89,7 +89,7 @@ function getWindowSize() {
     // console.log(pageHeight, innerHeight);
 }
 
-  function openLightbox(index) {
+function openLightbox(index) {
     current = index;
     const lightbox = document.getElementById("lightbox");
     const img = document.getElementById("lightbox-img");
@@ -99,20 +99,22 @@ function getWindowSize() {
     cap.textContent = images[current].caption;
 
     lightbox.style.display = "flex";
-  }
+    document.body.style.overflow = "hidden"; // 🚫 Desactiva scroll de la página
+}
 
 function closeLightbox() {
     document.getElementById("lightbox").style.display = "none";
+    document.body.style.overflow = ""; // ✅ Restaura el scroll
 }
 
-  function changeImage(direction) {
+function changeImage(direction) {
     current = (current + direction + images.length) % images.length;
     const img = document.getElementById("lightbox-img");
     const cap = document.getElementById("caption");
 
     img.src = images[current].src;
     cap.textContent = images[current].caption;
-  }
+}
 
 document.head.appendChild(style);
 
@@ -148,14 +150,14 @@ document.addEventListener("keydown", (e) => {
 // Control táctil (swipe)
 
 lightboxImg.addEventListener("touchstart", (e) => {
-  startX = e.touches[0].clientX;
+    startX = e.touches[0].clientX;
 });
 
 lightboxImg.addEventListener("touchend", (e) => {
-  const endX = e.changedTouches[0].clientX;
-  const diff = startX - endX;
-  if (Math.abs(diff) > 50) { // umbral de deslizamiento
-    if (diff > 0) changeImage(1);   // desliza izquierda → siguiente
-    else changeImage(-1);           // desliza derecha → anterior
-  }
+    const endX = e.changedTouches[0].clientX;
+    const diff = startX - endX;
+    if (Math.abs(diff) > 50) { // umbral de deslizamiento
+        if (diff > 0) changeImage(1);   // desliza izquierda → siguiente
+        else changeImage(-1);           // desliza derecha → anterior
+    }
 });
