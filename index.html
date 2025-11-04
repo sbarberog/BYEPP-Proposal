@@ -50,8 +50,7 @@
   <div class="section">
     <h2><span class="emoji">⚔️</span>Cambios principales</h2>
     <h3>
-      <span class="emoji">🔋</span>Sustitución de los PP por PE (Puntos de
-      Energía)
+      <span class="emoji">🔋</span>Despídete de los PP (DEP)
     </h3>
     <ul>
       <li>
@@ -79,12 +78,32 @@
         Al final de cada turno, ambos bandos <strong>recuperan 1 PE</strong> (sin superar el máximo de 3). <a
           href="#special" class="highlight">*</a>
       </li>
+    </ul>
+    <h3>
+      <span class="emoji">👀</span>¿Cómo se muestran los PE?
+    </h3>
+    <ul>
       <li>
-        Los PE siempre serán <strong>visibles</strong> para ambos oponentes, y
-        se representarán de manera gráfica (p. ej. una batería o una pokéball
+        Los PE disponibles siempre son <strong>visibles para ambos oponentes</strong>. <a href="#special"
+          class="highlight">*</a></li>
+      <li>
+        Se representan de manera gráfica y sencilla (p. ej. una batería o una pokéball
         con 3 secciones).
       </li>
     </ul>
+    <div class="gallery">
+      <img src="img/byepp-hud.jpg" alt="HUD example" onclick="openLightbox(0)">
+      <img src="img/byepp-explanation.jpg" alt="HUD explanation" onclick="openLightbox(1)">
+    </div>
+    <p class="gallery-caption">Ejemplo de diseño de la interfaz.</p>
+  </div>
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <span class="prev" onclick="changeImage(-1)">&#10094;</span>
+    <img id="lightbox-img" src="" alt="Imagen grande">
+    <span class="next" onclick="changeImage(1)">&#10095;</span>
+    <div class="caption" id="caption"></div>
   </div>
 
   <div class="section">
@@ -199,7 +218,8 @@
     <h2><span class="emoji">⭐</span>Habilidades y mecánicas especiales *</h2>
     <ul>
       <li>
-        Algunas <strong>habilidades</strong> reducen en <strong>1 PE</strong> el coste de ataques de tipo concreto:
+        Algunas <strong>habilidades</strong> reducen el <strong>coste de PE</strong> de los movimientos de un tipo
+        concreto:
         <ul>
           <li>
             Ej: Espesura, Mar Llamas o Torrente añadirían este efecto al tener
@@ -207,8 +227,11 @@
           </li>
         </ul>
       </li>
+      <li>Ciertos movimientos o habilidades <strong>ocultan los PE disponibles</strong> al bando contrario.</li>
+      <li>La potencia de ciertos movimientos cambiará en función de los <strong>PE disponibles del rival</strong> en ese
+        instante.</li>
       <li>
-        <strong>Megaevolución</strong>:
+        <span class="highlight"><strong>Megaevolución</strong></span>:
         <ul>
           <li>Al megaevolucionar, consigues
             <strong>+1 PE inmediato</strong>.
@@ -220,8 +243,7 @@
           </li>
         </ul>
       </li>
-      <li>
-        <strong>Teracristalización</strong>: los ataques del tipo del
+      <li><span class="highlight"><strong>Teracristalización</strong></span>: los ataques del tipo del
         teracristal costarán <strong>-1 PE</strong>.
       </li>
       <li>

@@ -3,6 +3,12 @@ const backToTop = document.querySelector('.back-to-top');
 const pokeball = document.querySelectorAll(".pokeball");
 const mediaQuery = window.matchMedia('(max-width: 600px)');
 const style = document.createElement('style');
+// gallery
+const images = [
+    { src: "img/byepp-hud.jpg", caption: "HUD example" },
+    { src: "img/byepp-explanation.jpg", caption: "HUD explanation" }
+  ];
+let current = 0;
 
 function scrollAction() {
     percent = window.pageYOffset / (pageHeight - windowHeight);
@@ -81,6 +87,31 @@ function getWindowSize() {
     // console.log(pageHeight, innerHeight);
 }
 
+  function openLightbox(index) {
+    current = index;
+    const lightbox = document.getElementById("lightbox");
+    const img = document.getElementById("lightbox-img");
+    const cap = document.getElementById("caption");
+
+    img.src = images[current].src;
+    cap.textContent = images[current].caption;
+
+    lightbox.style.display = "flex";
+  }
+
+function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+}
+
+  function changeImage(direction) {
+    current = (current + direction + images.length) % images.length;
+    const img = document.getElementById("lightbox-img");
+    const cap = document.getElementById("caption");
+
+    img.src = images[current].src;
+    cap.textContent = images[current].caption;
+  }
+
 document.head.appendChild(style);
 
 handleMediaChange(mediaQuery);
@@ -98,3 +129,16 @@ window.onscroll = function () {
 
 mediaQuery.addEventListener('change', handleMediaChange);
 
+// Gallery: Cerrar con clic fuera
+document.getElementById("lightbox").addEventListener("click", (e) => {
+    if (e.target.id === "lightbox") closeLightbox();
+});
+// Controles de teclado
+document.addEventListener("keydown", (e) => {
+    const lightbox = document.getElementById("lightbox");
+    if (lightbox.style.display === "flex") {
+        if (e.key === "ArrowLeft") changeImage(-1);
+        if (e.key === "ArrowRight") changeImage(1);
+        if (e.key === "Escape") closeLightbox();
+    }
+});

@@ -371,3 +371,87 @@ header {
   /* pointer-events: none; */
   user-select: none;
 }
+
+/* LIGHTBOX GALLERY */
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px;
+}
+
+.gallery img {
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+
+.gallery img:hover {
+  transform: scale(1.1);
+}
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 80vh;
+  border-radius: 10px;
+}
+
+/* Controles */
+.close,
+.prev,
+.next {
+  position: absolute;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  user-select: none;
+  font-weight: bold;
+}
+
+.close {
+  top: 20px;
+  right: 30px;
+}
+.prev {
+  left: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.next {
+  right: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.caption {
+  color: white;
+  margin-top: 15px;
+  font-size: 1.1rem;
+  text-align: center;
+
+}.gallery-caption {
+  color: #2a75bb;
+  margin-top: 0px;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.close:hover,
+.prev:hover,
+.next:hover {
+  color: #ccc;
+}
