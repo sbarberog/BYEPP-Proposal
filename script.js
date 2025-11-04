@@ -62,8 +62,11 @@ function handleMediaChange() {
             .poke-bottom:hover {
                 box-shadow: 0px 0px 40px rgba(249, 251, 255, 0.637);
             }
-            .section:hover {
+            .section:hover li, .section:hover p{
                 color: #1b1b1b;
+            }
+            .conclusion:hover li, .conclusion:hover p{
+                color: #ffffff;
             }
             @media (min-width: 1100px) {
             .section:hover {
@@ -75,9 +78,10 @@ function handleMediaChange() {
                 transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
                 box-shadow: 4px 4px 0 #ffcb05, 1px 1px 2px rgba(3, 7, 18, 0.116),
                     3px 3px 8px rgba(3, 7, 18, 0.171), 6px 6px 19px rgba(3, 7, 18, 0.514);
-            }}
-            .conclusion:hover {
-                color: #ffffff;}
+            }}   
+            .img-container:hover img {
+                transform: scale(1.2); /* Zoom sin ampliar el recuadro */
+            }
             `;
         console.log("Style: desktop");
     }
@@ -99,12 +103,12 @@ function openLightbox(index) {
     cap.textContent = images[current].caption;
 
     lightbox.style.display = "flex";
-    document.body.style.overflow = "hidden"; // 🚫 Desactiva scroll de la página
+    document.body.style.overflow = "hidden"; //  Desactiva scroll de la página
 }
 
 function closeLightbox() {
     document.getElementById("lightbox").style.display = "none";
-    document.body.style.overflow = ""; // ✅ Restaura el scroll
+    document.body.style.overflow = ""; //  Restaura el scroll
 }
 
 function changeImage(direction) {
