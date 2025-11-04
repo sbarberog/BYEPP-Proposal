@@ -420,7 +420,7 @@ header {
 }
 
 .lightbox img {
-  max-width: 90%;
+  max-width: 98%;
   max-height: 75vh;
   border-radius: 10px;
 }
