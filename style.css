@@ -20,10 +20,11 @@ body {
   margin: 0;
   /* font-family: monospace; */
   display: flex;
+  flex-direction: column;
   /* grid-template-columns: auto 1fr; */
   /* min-height: 100vh; */
   /* flex-direction: row; */
-  /* align-items: center; */
+  align-items: center;
   font-family: "Atkinson Hyperlegible Next", sans-serif;
   /* font-family: "Atkinson Hyperlegible Mono", sans-serif; */
   font-style: normal;
@@ -33,7 +34,7 @@ aside {
   position: fixed;
   top: 300px;
   right: 20px;
-  width: 30%;
+  width: 20%;
   /* background: #f4f4f4; */
   padding: 20px;
   height: 100vh;
@@ -75,7 +76,7 @@ li {
 }
 main {
   flex: 1;
-  margin: auto;
+  /* margin: auto; */
   width: 100%;
   /* font-family: monospace; */
   display: flex;
@@ -216,6 +217,7 @@ p {
     ),
     linear-gradient(red 46%, #1b1b1b 46%, #1b1b1b 54%, #fff 54%);
   position: absolute;
+  transition: 0.2s ease;
 }
 .pokeball-end {
   background-image: radial-gradient(
@@ -282,7 +284,7 @@ header {
   z-index: 10;
   height: 80px;
   width: 80px;
-  display: flex;
+  /* display: flex; */
   justify-content: center;
   /* bottom: 0px; */
   /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
@@ -298,6 +300,9 @@ header {
   /* position: absolute; */
   margin-right: 45px;
   margin-top: 11px;
+}
+.back-to-top .pokeball{
+  transition: 0.2s ease;
 }
 .emoji {
   text-shadow: none;
