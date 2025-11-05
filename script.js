@@ -68,7 +68,7 @@ function handleMediaChange() {
             @media (min-width: 1100px) {
             .section:hover {
                 // background: #fff;
-                padding: 0px 100px 40px 100px;
+                // padding: 0px 100px 40px 100px;
                 // max-width: 1100px;
                 z-index: 1;
                 transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);

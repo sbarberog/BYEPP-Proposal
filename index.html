@@ -9,307 +9,331 @@
 </head>
 
 <body>
-  <header>
-    <h1>
-      <span class="byepp">Propuesta "D.E.P.P.P."</span><br />
-      <div class="wrapper">
-        <div class="yellow-spot"></div>
-        <div class="pokeball poke-top"></div>
-        <div class="dummy"></div>
-      </div>
-      <br />Dinámica Estratégica del Paradigma de los Puntos de Poder
-    </h1>
-  </header>
   <!-- <h1>The <span class="byepp">"B.Y.E.P.P."</span> proposal<br><br>Battle Yield Energy Points Paradigm</h1> -->
 
-  <div class="section">
-    <h2><span class="emoji">🧭</span>Introducción</h2>
-    <h3><span class="emoji">❓</span>¿Qué es la propuesta D.E.P.P.P.?</h3>
-    <p>
-      Esta propuesta consiste en una modificación del sistema de combate por
-      turnos clásico de Pokémon.<br />--WIP--
-    </p>
-    <h3><span class="emoji">🎯</span>Objetivos</h3>
+  <aside>
+    <h2>Índice</h2>
     <ul>
-      <li>
-        Ampliar el <strong>potencial estratégico</strong> del juego
-        reduciendo la importancia de la tabla de tipos gracias a una economía de recursos adicional.
-      </li>
-      <li>
-        Favorecer la toma de decisiones con mayor relación
-        <strong>riesgo-recompensa</strong> que aporten epicidad a los combates.
-      </li>
-      <li>Fomentar la elección de movimientos menos populares.</li>
-      <li>
-        Mantener intacto el <strong>sistema de turnos clásico</strong> y la
-        <strong>accesibilidad</strong> para jugadores casuales.
-      </li>
+      <li><a href="#intro">Introducción</a></li>
+      <li><a href="#main-changes">Cambios principales</a></li>
+      <li><a href="#ap-costs">Coste de PA de los movimientos</a></li>
+      <li><a href="#energy-recovery">Recuperación de energía</a></li>
+      <li><a href="#items">Objetos y otras acciones</a></li>
+      <li><a href="#special">Habilidades y mecánicas especiales</a></li>
+      <li><a href="#doubles">Combates dobles</a></li>
+      <li><a href="#conclusion">Conclusión</a></li>
     </ul>
-  </div>
+  </aside>
 
-  <div class="section">
-    <h2><span class="emoji">⚔️</span>Cambios principales</h2>
-    <h3>
-      <span class="emoji">🔋</span>Despídete de los PP (DEP)
-    </h3>
-    <ul>
-      <li>
-        Los <span class="highlight">PP (Puntos de Poder)</span> desaparecen y
-        se sustituyen por
-        <span class="highlight">PE = Puntos de Energía</span>.
-      </li>
-      <li>
-        Inspirado en el sistema de energías del
-        <strong>Juego de Cartas Coleccionables</strong> de Pokémon.
-      </li>
-      <li>
-        Inicio del combate: ambos bandos tienen
-        <strong>3 PE (valor máximo)</strong>. <a href="#special" class="highlight">*</a>
-      </li>
-      <li>
-        Cada acción tiene un coste fijo comprendido entre
-        <strong>0 y 3 PE</strong>. <a href="#special" class="highlight">*</a>
-      </li>
-      <li>
-        Si al principio del turno no tienes PE suficientes para ejecutar una
-        movimiento, no se podrá seleccionar.
-      </li>
-      <li>
-        Al final de cada turno, ambos bandos <strong>recuperan 1 PE</strong> (sin superar el máximo de 3). <a
-          href="#special" class="highlight">*</a>
-      </li>
-    </ul>
-    <h3>
-      <span class="emoji">👀</span>¿Cómo se muestran los PE?
-    </h3>
-    <ul>
-      <li>
-        Los PE disponibles siempre son <strong>visibles para ambos oponentes</strong>. <a href="#special"
-          class="highlight">*</a></li>
-      <li>
-        Se representan de manera gráfica y sencilla (p. ej. barras verticales, una batería o una pokéball dividida en 3
-        secciones).
-      </li>
-    </ul>
-    <div class="gallery">
-      <div class="img-container"><img src="img/byepp-hud.jpg" alt="HUD example" onclick="openLightbox(0)"></div>
-      <div class="img-container"><img src="img/byepp-explanation.jpg" alt="HUD explanation" onclick="openLightbox(1)">
+  <main>
+
+    <header>
+      <h1>
+        <span class="byepp">Propuesta "D.E.P.P.P."</span><br />
+        <div class="wrapper">
+          <div class="yellow-spot"></div>
+          <div class="pokeball poke-top"></div>
+          <div class="dummy"></div>
+        </div>
+        <br />Dinámica Estratégica del Paradigma de los Puntos de Poder
+      </h1>
+    </header>
+
+    <div class="section" id="intro">
+      <h2><span class="emoji">🧭</span>Introducción</h2>
+      <h3><span class="emoji">❓</span>¿Qué es la propuesta D.E.P.P.P.?</h3>
+      <p>
+        Esta propuesta consiste en una modificación del sistema de combate por
+        turnos clásico de Pokémon.<br />--WIP--
+      </p>
+      <h3><span class="emoji">🎯</span>Objetivos</h3>
+      <ul>
+        <li>
+          Ampliar el <strong>potencial estratégico</strong> del juego
+          reduciendo la importancia de la tabla de tipos gracias a una economía de recursos adicional.
+        </li>
+        <li>
+          Favorecer la toma de decisiones con mayor relación
+          <strong>riesgo-recompensa</strong> que aporten epicidad a los combates.
+        </li>
+        <li>Fomentar la elección de movimientos menos populares.</li>
+        <li>
+          Mantener intacto el <strong>sistema de turnos clásico</strong> y la
+          <strong>accesibilidad</strong> para jugadores casuales.
+        </li>
+      </ul>
+    </div>
+
+    <div class="section" id="main-changes">
+      <h2><span class="emoji">⚔️</span>Cambios principales</h2>
+      <h3>
+        <span class="emoji">🔋</span>Despídete de los PP (DEP)
+      </h3>
+      <ul>
+        <li>
+          Los <span class="highlight">PP (Puntos de Poder)</span> desaparecen y
+          se sustituyen por
+          <span class="highlight">PE = Puntos de Energía</span>.
+        </li>
+        <li>
+          Inspirado en el sistema de energías del
+          <strong>Juego de Cartas Coleccionables</strong> de Pokémon.
+        </li>
+        <li>
+          Inicio del combate: ambos bandos tienen
+          <strong>3 PE (valor máximo)</strong>. <a href="#special" class="highlight">*</a>
+        </li>
+        <li>
+          Cada acción tiene un coste fijo comprendido entre
+          <strong>0 y 3 PE</strong>. <a href="#special" class="highlight">*</a>
+        </li>
+        <li>
+          Si al principio del turno no tienes PE suficientes para ejecutar una
+          movimiento, no se podrá seleccionar.
+        </li>
+        <li>
+          Al final de cada turno, ambos bandos <strong>recuperan 1 PE</strong> (sin superar el máximo de 3). <a
+            href="#special" class="highlight">*</a>
+        </li>
+      </ul>
+      <h3>
+        <span class="emoji">👀</span>¿Cómo se muestran los PE?
+      </h3>
+      <ul>
+        <li>
+          Los PE disponibles siempre son <strong>visibles para ambos oponentes</strong>. <a href="#special"
+            class="highlight">*</a></li>
+        <li>
+          Se representan de manera gráfica y sencilla (p. ej. barras verticales, una batería o una pokéball dividida en
+          3
+          secciones).
+        </li>
+      </ul>
+      <div class="gallery">
+        <div class="img-container"><img src="img/byepp-hud.jpg" alt="HUD example" onclick="openLightbox(0)"></div>
+        <div class="img-container"><img src="img/byepp-explanation.jpg" alt="HUD explanation" onclick="openLightbox(1)">
+        </div>
       </div>
+      <p class="gallery-caption">Ejemplo de diseño de la interfaz (pulsa para agrandar).</p>
     </div>
-    <p class="gallery-caption">Ejemplo de diseño de la interfaz (pulsa para agrandar).</p>
-  </div>
 
-  <!-- Lightbox -->
-  <div class="lightbox" id="lightbox">
-    <span class="close" onclick="closeLightbox()">&times;</span>
-    <img id="lightbox-img" src="" alt="Big picture">
-    <div class="controls">
-      <span class="prev" onclick="changeImage(-1)">&#10094;</span>
-      <span class="next" onclick="changeImage(1)">&#10095;</span>
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+      <span class="close" onclick="closeLightbox()">&times;</span>
+      <img id="lightbox-img" src="" alt="Big picture">
+      <div class="controls">
+        <span class="prev" onclick="changeImage(-1)">&#10094;</span>
+        <span class="next" onclick="changeImage(1)">&#10095;</span>
+      </div>
+      <div class="caption" id="caption"></div>
     </div>
-    <div class="caption" id="caption"></div>
-  </div>
 
-  <div class="section">
-    <h2>
-      <span class="emoji">💥</span>Coste de PA de los movimientos
-    </h2>
-    <ul>
-      <li>El coste de los movimientos dependerá principalmente de su <strong>utilidad</strong> o su <strong>potencia de
-          ataque</strong>.</li>
-      <li>Por norma general, el coste de PA debería ser inversamente proporcinal a la cantidad de PP de ese movimiento
-        (p.ej. 5 PP = 3 PA, 30 PP = 0-1 PA).</li>
-    </ul>
-    <table>
-      <tr>
-        <th>Coste</th>
-        <th>Clases de movimientos</th>
-        <th>Ejemplos</th>
-      </tr>
-      <tr>
-        <td>0 PE</td>
-        <td>
-          Ataques sin daño o de escasa utilidad; permiten actuar a la vez que
-          se recupera energía
-        </td>
-        <td>Gruñido, Aguante, Ataque arena</td>
-      </tr>
-      <tr>
-        <td>1 PE</td>
-        <td>
-          Ataques básicos (potencia ≲ 60), de estado o con efectos negativos
-        </td>
-        <td>Placaje, Mordisco, Paralizador, Patada salto alta, Derribo</td>
-      </tr>
-      <tr>
-        <td>2 PE</td>
-        <td>
-          Ataques fuertes (potencia ≳ 60), múltiples o con efectos especiales.
-        </td>
-        <td>
-          Surf, Puño dinámico, Excavar, Protección, Voltiocambio, Síntesis
-        </td>
-      </tr>
-      <tr>
-        <td>3 PE</td>
-        <td>Ataques extremadamente potentes o definitivos</td>
-        <td>Llamarada, Hiperrayo, Rayo solar, Fisura</td>
-      </tr>
-    </table>
-  </div>
+    <div class="section" id="ap-costs">
+      <h2>
+        <span class="emoji">💥</span>Coste de PA de los movimientos
+      </h2>
+      <ul>
+        <li>El coste de los movimientos dependerá principalmente de su <strong>utilidad</strong> o su <strong>potencia
+            de
+            ataque</strong>.</li>
+        <li>Por norma general, el coste de PA debería ser inversamente proporcinal a la cantidad de PP de ese movimiento
+          (p.ej. 5 PP = 3 PA, 30 PP = 0-1 PA).</li>
+      </ul>
+      <table>
+        <tr>
+          <th>Coste</th>
+          <th>Clases de movimientos</th>
+          <th>Ejemplos</th>
+        </tr>
+        <tr>
+          <td>0 PE</td>
+          <td>
+            Ataques sin daño o de escasa utilidad; permiten actuar a la vez que
+            se recupera energía
+          </td>
+          <td>Gruñido, Aguante, Ataque arena</td>
+        </tr>
+        <tr>
+          <td>1 PE</td>
+          <td>
+            Ataques básicos (potencia ≲ 60), de estado o con efectos negativos
+          </td>
+          <td>Placaje, Mordisco, Paralizador, Patada salto alta, Derribo</td>
+        </tr>
+        <tr>
+          <td>2 PE</td>
+          <td>
+            Ataques fuertes (potencia ≳ 60), múltiples o con efectos especiales.
+          </td>
+          <td>
+            Surf, Puño dinámico, Excavar, Protección, Voltiocambio, Síntesis
+          </td>
+        </tr>
+        <tr>
+          <td>3 PE</td>
+          <td>Ataques extremadamente potentes o definitivos</td>
+          <td>Llamarada, Hiperrayo, Rayo solar, Fisura</td>
+        </tr>
+      </table>
+    </div>
 
-  <div class="section">
-    <h2><span class="emoji">💚</span>Recuperación de energía</h2>
-    <ul>
-      <li>
-        Si un Pokémon tiene
-        <strong><span class="highlight">salud crítica</span></strong> al final
-        de su turno, se recupera <strong>+1 PE adicional</strong>.
-      </li>
-      <li>
-        Algunos <strong>ataques y objetos</strong> permiten
-        <strong>recuperar PE</strong>.
-      </li>
-      <li>
-        Algunos <strong>objetos equipados</strong> restauran PE:
-        <ul>
-          <li>Al entrar en combate.</li>
-          <li>
-            Al cumplirse ciertas condiciones (p. ej. sufrir un estado
-            alterado).
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </div>
+    <div class="section" id="energy-recovery">
+      <h2><span class="emoji">💚</span>Recuperación de energía</h2>
+      <ul>
+        <li>
+          Si un Pokémon tiene
+          <strong><span class="highlight">salud crítica</span></strong> al final
+          de su turno, se recupera <strong>+1 PE adicional</strong>.
+        </li>
+        <li>
+          Algunos <strong>ataques y objetos</strong> permiten
+          <strong>recuperar PE</strong>.
+        </li>
+        <li>
+          Algunos <strong>objetos equipados</strong> restauran PE:
+          <ul>
+            <li>Al entrar en combate.</li>
+            <li>
+              Al cumplirse ciertas condiciones (p. ej. sufrir un estado
+              alterado).
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
 
-  <div class="section">
-    <h2><span class="emoji">🎒</span>Objetos y otras acciones</h2>
-    <ul>
-      <li>
-        Los <strong>objetos consumen PE</strong> según su potencia o utilidad:
-        <ul>
-          <li>Poción, Antídoto = 1 PE</li>
-          <li>Ataque X, Revivir = 2 PE</li>
-          <li>Máx. Revivir = 3 PE</li>
-        </ul>
-      </li>
-      <li><strong>Cambiar de Pokémon</strong> cuesta 0 PE.</li>
-      <li>Movimiento <strong>Rencor (3 PE)</strong>: aumenta en 1 el coste de PE de los movimientos del rival durante 3
-        turnos (el efecto no se acumula).</li>
-      <li>
-        Habilidad <strong>Presión</strong>: reduce en 1 los PE del enemigo en el turno
-        inicial.
-      </li>
-      <li>
-        Si un pokémon no tiene PE suficientes antes de atacar, su ataque
-        <strong>fallará</strong>.
-      </li>
-      <li>
-        <strong>Nueva acción universal: <span class="highlight">Defender</span> (0
-          PE)</strong>
-        <ul>
-          <li>Aumenta ligeramente la <strong>evasión</strong> ese turno.</li>
-          <li>
-            Permite resistir un ataque con <strong>1 PS</strong> si el daño no
-            es excesivo (sinergia con recuperación de PE con <span class="highlight">salud crítica</span>).
-          </li>
-          <li>
-            Movimiento con <strong>prioridad</strong> y animación de
-            protección.
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </div>
+    <div class="section" id="items">
+      <h2><span class="emoji">🎒</span>Objetos y otras acciones</h2>
+      <ul>
+        <li>
+          Los <strong>objetos consumen PE</strong> según su potencia o utilidad:
+          <ul>
+            <li>Poción, Antídoto = 1 PE</li>
+            <li>Ataque X, Revivir = 2 PE</li>
+            <li>Máx. Revivir = 3 PE</li>
+          </ul>
+        </li>
+        <li><strong>Cambiar de Pokémon</strong> cuesta 0 PE.</li>
+        <li>Movimiento <strong>Rencor (3 PE)</strong>: aumenta en 1 el coste de PE de los movimientos del rival durante
+          3
+          turnos (el efecto no se acumula).</li>
+        <li>
+          Habilidad <strong>Presión</strong>: reduce en 1 los PE del enemigo en el turno
+          inicial.
+        </li>
+        <li>
+          Si un pokémon no tiene PE suficientes antes de atacar, su ataque
+          <strong>fallará</strong>.
+        </li>
+        <li>
+          <strong>Nueva acción universal: <span class="highlight">Defender</span> (0
+            PE)</strong>
+          <ul>
+            <li>Aumenta ligeramente la <strong>evasión</strong> ese turno.</li>
+            <li>
+              Permite resistir un ataque con <strong>1 PS</strong> si el daño no
+              es excesivo (sinergia con recuperación de PE con <span class="highlight">salud crítica</span>).
+            </li>
+            <li>
+              Movimiento con <strong>prioridad</strong> y animación de
+              protección.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
 
-  <div class="section" id="special">
-    <h2><span class="emoji">⭐</span>Habilidades y mecánicas especiales *</h2>
-    <ul>
-      <li>
-        Algunas <strong>habilidades</strong> reducen el <strong>coste de PE</strong> de los movimientos de un tipo
-        concreto:
-        <ul>
-          <li>
-            Ej: Espesura, Mar Llamas o Torrente añadirían este efecto al tener
-            la salud por debajo de 1/3.
-          </li>
-        </ul>
-      </li>
-      <li>Ciertos movimientos o habilidades <strong>ocultan los PE disponibles</strong> al bando contrario.</li>
-      <li>La potencia de ciertos movimientos cambiará en función de los <strong>PE disponibles del rival</strong> en ese
-        instante.</li>
-      <li>
-        <span class="highlight"><strong>Megaevolución</strong></span>:
-        <ul>
-          <li>Al megaevolucionar, consigues
-            <strong>+1 PE inmediato</strong>.
-          </li>
-          <li>Estos pokémon dispondrán de <strong>+1 PE máximo</strong> mientras dure su forma.</li>
-          <li>
-            <strong>Energía Mega</strong>: se podría gastar 1/3 de Energía
-            Mega para ganar <strong>+1 PE</strong> al inicio de un turno.
-          </li>
-        </ul>
-      </li>
-      <li><span class="highlight"><strong>Teracristalización</strong></span>: los ataques del tipo del
-        teracristal costarán <strong>-1 PE</strong>.
-      </li>
-      <li>
-        <strong>Pokémon especiales</strong> (legendarios, míticos, pseudo-legendarios, etc.): podrán tener mecánicas
-        propias como +1 PE máximos, ganar PE de forma aleatoria, movimientos que suman/restan/roban PE, etc.
-      </li>
-      <li>
-        <strong>Combates especiales</strong> contra pokémon alfa y legendarios: dispondrán de <strong>PE
-          ilimitados</strong> (antes de ser capturados).
-      </li>
-      </li>
-    </ul>
-  </div>
+    <div class="section" id="special">
+      <h2><span class="emoji">⭐</span>Habilidades y mecánicas especiales *</h2>
+      <ul>
+        <li>
+          Algunas <strong>habilidades</strong> reducen el <strong>coste de PE</strong> de los movimientos de un tipo
+          concreto:
+          <ul>
+            <li>
+              Ej: Espesura, Mar Llamas o Torrente añadirían este efecto al tener
+              la salud por debajo de 1/3.
+            </li>
+          </ul>
+        </li>
+        <li>Ciertos movimientos o habilidades <strong>ocultan los PE disponibles</strong> al bando contrario.</li>
+        <li>La potencia de ciertos movimientos cambiará en función de los <strong>PE disponibles del rival</strong> en
+          ese
+          instante.</li>
+        <li>
+          <span class="highlight"><strong>Megaevolución</strong></span>:
+          <ul>
+            <li>Al megaevolucionar, consigues
+              <strong>+1 PE inmediato</strong>.
+            </li>
+            <li>Estos pokémon dispondrán de <strong>+1 PE máximo</strong> mientras dure su forma.</li>
+            <li>
+              <strong>Energía Mega</strong>: se podría gastar 1/3 de Energía
+              Mega para ganar <strong>+1 PE</strong> al inicio de un turno.
+            </li>
+          </ul>
+        </li>
+        <li><span class="highlight"><strong>Teracristalización</strong></span>: los ataques del tipo del
+          teracristal costarán <strong>-1 PE</strong>.
+        </li>
+        <li>
+          <strong>Pokémon especiales</strong> (legendarios, míticos, pseudo-legendarios, etc.): podrán tener mecánicas
+          propias como +1 PE máximos, ganar PE de forma aleatoria, movimientos que suman/restan/roban PE, etc.
+        </li>
+        <li>
+          <strong>Combates especiales</strong> contra pokémon alfa y legendarios: dispondrán de <strong>PE
+            ilimitados</strong> (antes de ser capturados).
+        </li>
+        </li>
+      </ul>
+    </div>
 
-  <div class="section">
-    <h2><span class="emoji">👥⚔️👥</span>Combates dobles</h2>
-    <ul>
-      <li>
-        Los <strong>PE máximos</strong> de cada bando aumentan a
-        <strong>5</strong>.
-      </li>
-      <li>Se <strong>recuperan 2 PE</strong> cada turno en lugar de 1.</li>
-      <li>
-        La economía de PE aumentaría considerablemente la
-        <strong><span class="highlight">complejidad estratégica</span></strong>
-        de los combates dobles, lo cual podría darle un nuevo impulso a la
-        <strong>escena competitiva</strong>.
-      </li>
-    </ul>
-  </div>
+    <div class="section" id="doubles">
+      <h2><span class="emoji">👥⚔️👥</span>Combates dobles</h2>
+      <ul>
+        <li>
+          Los <strong>PE máximos</strong> de cada bando aumentan a
+          <strong>5</strong>.
+        </li>
+        <li>Se <strong>recuperan 2 PE</strong> cada turno en lugar de 1.</li>
+        <li>
+          La economía de PE aumentaría considerablemente la
+          <strong><span class="highlight">complejidad estratégica</span></strong>
+          de los combates dobles, lo cual podría darle un nuevo impulso a la
+          <strong>escena competitiva</strong>.
+        </li>
+      </ul>
+    </div>
 
-  <div class="section conclusion">
-    <h2><span class="emoji">📜</span>Conclusión</h2>
-    <p>
-      Los <strong>Puntos de Poder (PP)</strong> representan una mecánica
-      obsoleta, molesta y con un impacto estratégico limitado. El nuevo
-      sistema de <strong>Puntos de Energía (PE)</strong>, aunque puede
-      presentar ciertos desafíos en su balanceo, debería ser sencillo de
-      comprender para todos los jugadores. <br /><br />Este cambio tendría un
-      impacto mínimo en las primeras etapas del juego, pero su importancia
-      iría en aumento a medida que los pokémon aprendan movimientos que
-      requieran más de 1 PE. De esta forma, se mantendría una
-      <strong>progresión de dificultad gradual</strong> hasta llegar a la Liga
-      Pokémon y el contenido post-game.<br />
-    </p>
-  </div>
+    <div class="section conclusion" id="conclusion">
+      <h2><span class="emoji">📜</span>Conclusión</h2>
+      <p>
+        Los <strong>Puntos de Poder (PP)</strong> representan una mecánica
+        obsoleta, molesta y con un impacto estratégico limitado. El nuevo
+        sistema de <strong>Puntos de Energía (PE)</strong>, aunque puede
+        presentar ciertos desafíos en su balanceo, debería ser sencillo de
+        comprender para todos los jugadores. <br /><br />Este cambio tendría un
+        impacto mínimo en las primeras etapas del juego, pero su importancia
+        iría en aumento a medida que los pokémon aprendan movimientos que
+        requieran más de 1 PE. De esta forma, se mantendría una
+        <strong>progresión de dificultad gradual</strong> hasta llegar a la Liga
+        Pokémon y el contenido post-game.<br />
+      </p>
+    </div>
+
+    <footer>
+      © 2025 The B.Y.E.P.P. Proposal - Design inspired on Game Freak / Nintendo
+      <br />Credits for the Pokéball CSS design:
+      <a href="https://github.com/thecodingcouple" style="color: #ffcb05">@thecodingcouple</a>
+    </footer>
+
+  </main>
+
 
   <a class="back-to-top wrapper" href="#top" aria-label="Back to Top" title="Back to top">
     <div class="yellow-spot"></div>
     <div class="pokeball poke-bottom"></div>
   </a>
-
-  <footer>
-    © 2025 The B.Y.E.P.P. Proposal - Design inspired on Game Freak / Nintendo
-    <br />Credits for the Pokéball CSS design:
-    <a href="https://github.com/thecodingcouple" style="color: #ffcb05">@thecodingcouple</a>
-  </footer>
 
   <script src="script.js"></script>
 </body>
