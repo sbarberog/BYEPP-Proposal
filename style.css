@@ -601,17 +601,17 @@ header {
 .next:hover {
   color: #ccc;
 } */
-@media (max-width: 768px) and (min-height: 700px) {
+@media (max-width: 768px) and (min-height: 600px) {
   .img-container {
     width: 45%; /* 2 por fila en tablets */
   }
   /* Contenedor con fondo solo en móviles */
   .controls {
     position: absolute;
-    bottom: 80px;
+    bottom: 10%;
     display: flex;
     justify-content: center;
-    gap: 50px;
+    gap: 80px;
     width: 100%;
   }
   .controls span {
