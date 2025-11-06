@@ -32,7 +32,7 @@ body {
 /* Índice lateral */
 aside {
   position: fixed;
-  top: 300px;
+  top: 40%;
   right: 20px;
   width: 20%;
   /* background: #f4f4f4; */
@@ -195,18 +195,25 @@ p {
   font-size: clamp(10px, 2.2vw, 15px);
   line-height: 1.6;
 }
-.wrapper {
+.pokeball-title,.back-to-top {
   position: relative;
   height: 5vmin;
   width: 5vmin;
   margin: 20px auto 0px auto;
+}
+.pokeball-index{
+  display: inline-block;
+  position: relative;
+  height: 2vmin;
+  width: 2vmin;
+  margin: 0 20px 0 -20px;
 }
 .pokeball {
   z-index: 10;
   height: 100%;
   width: 100%;
   border-radius: 50%;
-  border: 0.4vmin solid #1b1b1b;
+  border: 0.2em solid #1b1b1b;
   background-image: radial-gradient(
       white 20%,
       #fff 20%,
@@ -217,7 +224,7 @@ p {
     ),
     linear-gradient(red 46%, #1b1b1b 46%, #1b1b1b 54%, #fff 54%);
   position: absolute;
-  transition: 0.2s ease;
+  transition: 0.1s ease;
 }
 .pokeball-end {
   background-image: radial-gradient(
@@ -235,7 +242,7 @@ p {
   height: 110%;
   width: 110%;
   border-radius: 50%;
-  box-shadow: 0.5vw 0.5vw 0 #2a75bb;
+  box-shadow: 0.35em 0.35em 0 #2a75bb;
   position: absolute;
   z-index: 9;
 }
@@ -302,7 +309,7 @@ header {
   margin-top: 11px;
 }
 .back-to-top .pokeball{
-  transition: 0.2s ease;
+  transition: 0.1s ease;
 }
 .emoji {
   text-shadow: none;
