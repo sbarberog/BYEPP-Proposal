@@ -601,7 +601,7 @@ header {
 .next:hover {
   color: #ccc;
 } */
-@media (max-width: 768px) {
+@media (max-width: 768px) and (min-height: 700px) {
   .img-container {
     width: 45%; /* 2 por fila en tablets */
   }
